@@ -1,10 +1,10 @@
 # Configurations
-title:            Test
+title:            Test blog of Jiho Son
 longtitle:        Why am I doing this
 author:           Jiho Son
 email:            paradichlorobenzene1724@gmail.com
 description: >
-  What am I doing
+  Some scientific scribbles
 
 version:          1.0
 gitbook_version:  3.2.3
