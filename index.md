@@ -7,7 +7,9 @@ Jiho Son
 Undergraduate student
 
 Department of Chemistry
+
 College of Natural Sciences
+
 Seoul National University (Seoul, South Korea)
 
 Currently interested in theoretical, computational chemistry and machine learning approaches on computational chemistry
