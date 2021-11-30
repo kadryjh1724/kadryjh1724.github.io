@@ -8,13 +8,12 @@ toc_label: "Myself"
 
 **Jiho Son**
 
-Undergraduate student
-Majoring in Chemistry, minoring in physics & mathematical science
+Undergraduate student<br>Majoring in Chemistry, minoring in physics & mathematical science<br><br>
 
-Department of Chemistry
-College of Natural Sciences
-Seoul National University (Seoul, South Korea)
+Department of Chemistry<br>
+College of Natural Sciences<br>
+Seoul National University (Seoul, South Korea)<br><br>
 
-**Current interest**
-Theoretical chemistry
+**Current interest**<br>
+Theoretical chemistry<br>
 Computational chemistry including molecular dynamics, quantum chemistry, machine learning.
