@@ -18,7 +18,7 @@ masthead_title           : "A few scribbles on chemistry."
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
-  provider               : "disqus"
+  provider               : "utterances"
   disqus:
     shortname            : "kadryjh1724-github-io"
   discourse:
