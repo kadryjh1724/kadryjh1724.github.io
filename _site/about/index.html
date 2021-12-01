@@ -162,7 +162,7 @@
     </h3>
     
       <div class="author__bio p-note" itemprop="description">
-        <p>**Undergraduate student currently majoring in chemistry.<br />Now studying theoretical and computational chemistry.</p>
+        <p>Undergraduate student currently majoring in chemistry.<br />Now studying theoretical and computational chemistry.</p>
 
       </div>
     
@@ -280,23 +280,32 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Myself</h4></header>
-              
+              <ul class="toc__menu"><li><a href="#equation-test">Equation test</a></li></ul>
 
             </nav>
           </aside>
         
-        <p><strong>Jiho Son</strong></p>
+        <p><strong>Jiho Son</strong><br />
+Undergraduate student<br />Majoring in Chemistry, minoring in physics &amp; mathematical science<br /><br />
+Department of Chemistry<br />
+College of Natural Sciences<br />
+Seoul National University (Seoul, South Korea)<br /><br />
+<strong>Current interest</strong><br />
+Theoretical chemistry<br />
+Computational chemistry including molecular dynamics, quantum chemistry, machine learning.<br /></p>
+<h2 id="equation-test">Equation test</h2>
 
-<p>Undergraduate student
-Majoring in Chemistry, minoring in physics &amp; mathematical science</p>
+<p>Schrödinger equation</p>
 
-<p>Department of Chemistry
-College of Natural Sciences
-Seoul National University (Seoul, South Korea)</p>
+\[-\frac{\hbar^{2}}{2m}\nabla^{2}\psi+V\psi=E\psi\]
 
-<p><strong>Current interest</strong>
-Theoretical chemistry
-Computational chemistry including molecular dynamics, quantum chemistry, machine learning.</p>
+<p>Proper time</p>
+
+\[d\tau = \sqrt{-\eta_{ab}dx^{a}dx^{b}}\]
+
+<p>Covariant derivative</p>
+
+\[(\nabla_{a}T)^{b}{}_{c}=\partial_{a}T^{b}{}_{c}+\Gamma^{b}{}_{ad}T^{d}{}_{c}-\Gamma^{d}{}_{ac}T^{b}{}_{d}\]
 
         
       </section>
@@ -372,6 +381,28 @@ Computational chemistry including molecular dynamics, quantum chemistry, machine
 
 
 
-
+    <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        packages: ['base', 'ams']
+      },
+      loader: {
+        load: ['ui/menu', '[tex]/ams']
+      },
+      startup: {
+        ready() {
+          MathJax.startup.defaultReady();
+          const Macro = MathJax._.input.tex.Symbol.Macro;
+          const MapHandler = MathJax._.input.tex.MapHandler.MapHandler;
+          const Array = MathJax._.input.tex.ams.AmsMethods.default.Array;
+          const env = new Macro('psmallmatrix', Array, [null, '(', ')', 'c', '.333em', '.2em', 'S', 1]);
+          MapHandler.getMap('AMSmath-environment').add('psmallmatrix', env);
+        }
+      }
+    };
+  </script>
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+  </script>
   </body>
 </html>
