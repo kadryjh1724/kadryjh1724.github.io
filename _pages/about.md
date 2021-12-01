@@ -6,6 +6,10 @@ toc_sticky: true
 toc_label: "Myself"
 ---
 
+# Basic information
+
+## Education
+
 **Jiho Son**<br>
 Undergraduate student<br>Majoring in Chemistry, minoring in physics & mathematical science<br><br>
 Department of Chemistry<br>
@@ -14,6 +18,7 @@ Seoul National University (Seoul, South Korea)<br><br>
 **Current interest**<br>
 Theoretical chemistry<br>
 Computational chemistry including molecular dynamics, quantum chemistry, machine learning.<br>
+
 ## Equation test
 
 Schrödinger equation
