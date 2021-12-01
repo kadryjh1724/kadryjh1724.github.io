@@ -6,18 +6,22 @@ toc_sticky: true
 toc_label: "Myself"
 ---
 
-# Basic information
-
 ## Education
 
 **Jiho Son**<br>
 Undergraduate student<br>Majoring in Chemistry, minoring in physics & mathematical science<br><br>
 Department of Chemistry<br>
 College of Natural Sciences<br>
-Seoul National University (Seoul, South Korea)<br><br>
-**Current interest**<br>
+Seoul National University (Seoul, South Korea)<br>
+
+## Current Interest
+
 Theoretical chemistry<br>
 Computational chemistry including molecular dynamics, quantum chemistry, machine learning.<br>
+
+## Curriculum Vitae
+
+Will be added (soon!)
 
 ## Equation test
 
@@ -35,4 +39,4 @@ $$ (\nabla_{a}T)^{b}{}_{c}=\partial_{a}T^{b}{}_{c}+\Gamma^{b}{}_{ad}T^{d}{}_{c}-
 
 ## Image test
 
-![doge](/images/post/doge.jpeg){:class="img-responsive"}
+![flop](/images/post/floppa_man.jpeg){:class="img-responsive"}
