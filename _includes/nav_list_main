@@ -1,0 +1,43 @@
+{% assign sum = site.posts | size %}
+
+<nav class="nav__list">
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">{{ site.data.ui-text[site.locale].menu_label }}</label>
+  <ul class="nav__items" id="category_tag_menu">
+      <li>
+            Total {{sum}} articles
+      </li>
+      <li>
+        <span class="nav__sub-title">Physical Chemistry</span>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "pchem1" %}
+                        <li><a href="/categories/pchem1" class="">Thermodynamics ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "pchem2" %}
+                        <li><a href="/categories/pchem2" class="">Statistical Mechanics ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "pchem3" %}
+                        <li><a href="/categories/pchem3" class="">Quantum Chemistry ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        <span class="nav__sub-title">Organic Chemistry</span>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "ochem" %}
+                        <li><a href="/categories/ochem" class="">Organic Chemistry ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+      </li>
+  </ul>
+</nav>
