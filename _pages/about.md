@@ -22,21 +22,3 @@ Computational chemistry including molecular dynamics, quantum chemistry, machine
 ## Curriculum Vitae
 
 Will be added (soon!)
-
-## Equation test
-
-Schrödinger equation
-
-$$ -\frac{\hbar^{2}}{2m}\nabla^{2}\psi+V\psi=E\psi $$
-
-Proper time
-
-$$ d\tau = \sqrt{-\eta_{ab}dx^{a}dx^{b}} $$
-
-Covariant derivative
-
-$$ (\nabla_{a}T)^{b}{}_{c}=\partial_{a}T^{b}{}_{c}+\Gamma^{b}{}_{ad}T^{d}{}_{c}-\Gamma^{d}{}_{ac}T^{b}{}_{d} $$
-
-## Image test
-
-![flop](/images/post/floppa_man.jpeg){:class="img-responsive"}
