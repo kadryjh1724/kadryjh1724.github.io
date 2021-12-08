@@ -1,18 +1,22 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-12-06T20:34:58+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Blog title (TBD)</title><subtitle>Some scientific scribbles.</subtitle><author><name>Jiho Son</name></author><entry><title type="html">Organic Chemistry: The Beginning</title><link href="http://localhost:4000/ochem/ochem-001/" rel="alternate" type="text/html" title="Organic Chemistry: The Beginning" /><published>2021-12-06T00:00:00+09:00</published><updated>2021-12-06T00:00:00+09:00</updated><id>http://localhost:4000/ochem/ochem-001</id><content type="html" xml:base="http://localhost:4000/ochem/ochem-001/">## Preface
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-12-08T16:40:03+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Blog title (TBD)</title><subtitle>Some scientific scribbles.</subtitle><author><name>Jiho Son</name></author><entry><title type="html">Reactions of alkanes</title><link href="http://localhost:4000/ochem/ochem-002/" rel="alternate" type="text/html" title="Reactions of alkanes" /><published>2021-12-08T00:00:00+09:00</published><updated>2021-12-08T00:00:00+09:00</updated><id>http://localhost:4000/ochem/ochem-002</id><content type="html" xml:base="http://localhost:4000/ochem/ochem-002/">&lt;h2 id=&quot;bond-dissociation-energy&quot;&gt;Bond-dissociation energy&lt;/h2&gt;
 
-I should mention this at first. Honestly speaking, I am not good at organic chemistry at all. In 2019, I took organic chemistry class in both spring and fall semester. However, knowledge was very volatile: a few years later, I can barely remember what I learned. While I am taking a year off the university, I decided to review undergraduate-level stuffs that I have learned. Therefore, my posts will be concentrated on the reactions I want (or need) to review.
+\[\mathrm{H-H}\;\rightarrow\;2\mathrm{H}\cdot\qquad \Delta{H}^{\circ}=DH^{\circ}=104\,\mathrm{kcal/mol}\]
 
-I assumed that readers already know freshmen-level of chemistry and are familiar with bond-line formulas. Moreover, Chapter 1 and 2 will be skipped, and we will start from Chapter 3.
+&lt;p&gt;Homolytic cleavage 과정을 통해 결합을 끊고 두 개의 radical을 형성하는 과정의 \(\Delta{H}^{\circ}\) 를 &lt;strong&gt;Bond-dissociation energy&lt;/strong&gt;라고 부른다.&lt;/p&gt;</content><author><name>Jiho Son</name></author><category term="ochem" /><category term="organic chemistry" /><summary type="html">Bond-dissociation energy</summary></entry><entry><title type="html">Organic Chemistry: The Beginning</title><link href="http://localhost:4000/ochem/ochem-001/" rel="alternate" type="text/html" title="Organic Chemistry: The Beginning" /><published>2021-12-06T00:00:00+09:00</published><updated>2021-12-06T00:00:00+09:00</updated><id>http://localhost:4000/ochem/ochem-001</id><content type="html" xml:base="http://localhost:4000/ochem/ochem-001/">&lt;h2 id=&quot;preface&quot;&gt;Preface&lt;/h2&gt;
 
-## Courses I took
+&lt;p&gt;I should mention this at first. Honestly speaking, I am not good at organic chemistry at all. In 2019, I took organic chemistry class in both spring and fall semester. However, knowledge was very volatile: a few years later, I can barely remember what I learned. While I am taking a year off the university, I decided to review undergraduate-level stuffs that I have learned. Therefore, my posts will be concentrated on the reactions I want (or need) to review.&lt;/p&gt;
 
-Organic Chemistry 1 (Spring 2019, SNU)
+&lt;p&gt;I assumed that readers already know freshmen-level of chemistry and are familiar with bond-line formulas. Moreover, Chapter 1 and 2 will be skipped, and we will start from Chapter 3.&lt;/p&gt;
 
-Organic Chemistry 2 (Fall 2019, SNU)
+&lt;h2 id=&quot;courses-i-took&quot;&gt;Courses I took&lt;/h2&gt;
 
-## Textbook
+&lt;p&gt;Organic Chemistry 1 (Spring 2019, SNU)&lt;/p&gt;
 
-Vollhardt, P. K.; Schore, N. *Organic Chemistry*, 8th ed.; W. H. Freeman and Company: New York, NY, **2018**.</content><author><name>Jiho Son</name></author><category term="ochem" /><category term="preface" /><category term="organic chemistry" /><summary type="html">Preface</summary></entry><entry><title type="html">Thermodynamics: Introduction</title><link href="http://localhost:4000/pchem1/pchem1-001/" rel="alternate" type="text/html" title="Thermodynamics: Introduction" /><published>2021-12-06T00:00:00+09:00</published><updated>2021-12-06T00:00:00+09:00</updated><id>http://localhost:4000/pchem1/pchem1-001</id><content type="html" xml:base="http://localhost:4000/pchem1/pchem1-001/">&lt;h2 id=&quot;preface&quot;&gt;Preface&lt;/h2&gt;
+&lt;p&gt;Organic Chemistry 2 (Fall 2019, SNU)&lt;/p&gt;
+
+&lt;h2 id=&quot;textbook&quot;&gt;Textbook&lt;/h2&gt;
+
+&lt;p&gt;Vollhardt, P. K.; Schore, N. &lt;em&gt;Organic Chemistry&lt;/em&gt;, 8th ed.; W. H. Freeman and Company: New York, NY, &lt;strong&gt;2018&lt;/strong&gt;.&lt;/p&gt;</content><author><name>Jiho Son</name></author><category term="ochem" /><category term="preface" /><category term="organic chemistry" /><summary type="html">Preface</summary></entry><entry><title type="html">Thermodynamics: Introduction</title><link href="http://localhost:4000/pchem1/pchem1-001/" rel="alternate" type="text/html" title="Thermodynamics: Introduction" /><published>2021-12-06T00:00:00+09:00</published><updated>2021-12-06T00:00:00+09:00</updated><id>http://localhost:4000/pchem1/pchem1-001</id><content type="html" xml:base="http://localhost:4000/pchem1/pchem1-001/">&lt;h2 id=&quot;preface&quot;&gt;Preface&lt;/h2&gt;
 
 &lt;p&gt;Thermodynamics is a composite word of &lt;em&gt;thermo&lt;/em&gt; (~heat) and &lt;em&gt;dynamics&lt;/em&gt; (~flow). Thermodynamics is based on macroscopic, empirical laws which have nothing to do with microscopic details. Actually, it is kind of weird to put “dynamics” in thermodynamics, because usually the term thermodynamics describes equilibrium states - they do not evolve along the time - which are &lt;strong&gt;not&lt;/strong&gt; dynamic. At first, we learn the law of thermodynamics and its consequences. After that, we will consider connection with microscopic, molecular level phenomenons.&lt;/p&gt;
 
@@ -24,4 +28,6 @@ Vollhardt, P. K.; Schore, N. *Organic Chemistry*, 8th ed.; W. H. Freeman and Com
 
 &lt;h2 id=&quot;textbook&quot;&gt;Textbook&lt;/h2&gt;
 
-&lt;!--Vollhardt, P. K.; Schore, N. *Organic Chemistry*, 8th ed.; W. H. Freeman and Company: New York, NY, **2018**.--&gt;</content><author><name>Jiho Son</name></author><category term="pchem1" /><category term="preface" /><category term="thermodynamics" /><summary type="html">Preface</summary></entry></feed>
+&lt;p&gt;Atkins, P.; de Paula, J. &lt;em&gt;Atkins’ Physical Chemistry&lt;/em&gt;, 10th ed.; W. H. Freeman and Company: New York, NY, &lt;strong&gt;2014&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Callen, H. B. &lt;em&gt;Thermodynamics and an Introduction to Thermostatistics&lt;/em&gt;, 2nd ed.; Wiley: New York, &lt;strong&gt;1991&lt;/strong&gt;.&lt;/p&gt;</content><author><name>Jiho Son</name></author><category term="pchem1" /><category term="preface" /><category term="thermodynamics" /><summary type="html">Preface</summary></entry></feed>
