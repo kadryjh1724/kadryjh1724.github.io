@@ -1,0 +1,103 @@
+I":<p>이 포스팅에서는 가장 간단한 유기화학 반응 중 하나인 radical halogenation에 대해 다룬다.</p>
+
+<p class="notice--info">Reference 기준으로 Chapter 3의 내용을 다룬다. 이미 preface에서 언급했듯이, Chapter 1과 2의 내용은 이미 잘 알고 있다는 가정 하에 포스팅을 작성할 예정이다. 어디까지나 나의 복습을 위한 것이므로 내가 기억해두고 싶은 것들을 위주로 작성할 예정이며, 교과서에 실린 모든 내용이 실려 있지 않을 수 있다는 점은 항상 유의하자.</p>
+
+<h2 id="1-bond-dissociation-energy">1. Bond-dissociation energy</h2>
+
+\[\mathrm{H-H}\;\rightarrow\;2\mathrm{H}\cdot\qquad \Delta{H}^{\circ}=DH^{\circ}=104\,\mathrm{kcal/mol}\]
+
+<p>Homolytic cleavage 과정을 통해 결합을 끊고 두 개의 radical을 형성하는 과정의 \(\Delta{H}^{\circ}\) 를 <strong>Bond-dissociation energy</strong>라고 부른다. 우리가 일반적으로 결합의 세기라고 부르는 값이다. 강한 결합일수록 끊기 어렵고, 따라서 반응에 사용하기 쉽지 않다는 것을 기억하자. 즉, 약한 결합일수록 원할 때 끊어서 반응에 사용할 수 있다는 의미가 된다. Bond-dissociation energy는 <strong>결합 엔탈피</strong>라고도 부른다.</p>
+
+<p>Chemical bonding은 orbital 사이의 overlap이다. 특히 크기와 에너지가 비슷한 orbital끼리 겹칠 때, 더 강한 결합이 형성된다.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"> </th>
+      <th style="text-align: center">\(\mathrm{CH_{3}-H}\)</th>
+      <th style="text-align: center">\(\mathrm{RCH_{2}-H}\)</th>
+      <th style="text-align: center">\(\mathrm{R_{2}CH-H}\)</th>
+      <th style="text-align: center">\(\mathrm{R_{3}C-H}\)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">Type</td>
+      <td style="text-align: center">methyl C</td>
+      <td style="text-align: center">primary( \(1^{\circ}\) ) C</td>
+      <td style="text-align: center">secondary( \(2^{\circ}\) ) C</td>
+      <td style="text-align: center">tertiary( \(3^{\circ}\) ) C</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">\(DH^{\circ}\) (kcal/mol)</td>
+      <td style="text-align: center">105</td>
+      <td style="text-align: center">101</td>
+      <td style="text-align: center">98.5</td>
+      <td style="text-align: center">96.5</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>C-H 단일 결합의 세기가 강할수록 생성되는 radical은 불안정하다. 따라서, radical의 stability는 다음 순서를 따른다.</p>
+
+\[\mathrm{methyl} &lt; 1^{\circ} &lt; 2^{\circ} &lt; 3^{\circ}\]
+
+<blockquote>
+  <p>\(\sigma\) electron pair와 empty <em>p</em> orbital 사이의 <strong>hyperconjugation</strong>이 radical을 안정화한다. 주변의 substituent가 많아서 가능한 hyperconjugation이 늘어나면 radical의 안정성이 더욱 증가한다.</p>
+</blockquote>
+
+<p><img src="http://localhost:4000/images/post/ochem/3-01.png" alt="3-01" class="align-center" width="400" /></p>
+
+<h3 id="bde-of-halogen-compounds">BDE of Halogen compounds</h3>
+
+<p>Hydrogen halide 형태의 화합물들은 어떨까?</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"> </th>
+      <th style="text-align: center">\(\mathrm{H-F}\)</th>
+      <th style="text-align: center">\(\mathrm{H-Cl}\)</th>
+      <th style="text-align: center">\(\mathrm{H-Br}\)</th>
+      <th style="text-align: center">\(\mathrm{H-I}\)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">\(DH^{\circ}\) (kcal/mol)</td>
+      <td style="text-align: center">136</td>
+      <td style="text-align: center">103</td>
+      <td style="text-align: center">87</td>
+      <td style="text-align: center">71</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Bond dissociation energy는 H-F 단일 결합 쪽으로 갈수록 점점 커진다. 이는 수소가 결합에 사용하는 1<em>s</em> orbital과 그나마 크기와 에너지가 비슷한 것이 플루오린의 2<em>p</em> orbital이기 때문이다. 주기율표 상에서 아래쪽으로 내려갈수록 결합에 사용하는 <em>p</em> orbital의 크기가 커지고 1<em>s</em> orbital과의 에너지 차이가 커지므로 orbital overlap이 잘 일어날 수 없고, 따라서 \(DH^{\circ}\)가 점점 작아진다. 똑같은 경향성은 methyl기( \(\mathrm{CH_{3}-}\) )와 halogen 사이의 결합에서도 드러난다.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"> </th>
+      <th style="text-align: center">\(\mathrm{CH_{3}-F}\)</th>
+      <th style="text-align: center">\(\mathrm{CH_{3}-Cl}\)</th>
+      <th style="text-align: center">\(\mathrm{CH_{3}-Br}\)</th>
+      <th style="text-align: center">\(\mathrm{CH_{3}-I}\)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">\(DH^{\circ}\) (kcal/mol)</td>
+      <td style="text-align: center">110</td>
+      <td style="text-align: center">85</td>
+      <td style="text-align: center">70</td>
+      <td style="text-align: center">57</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="exercise">Exercise</h3>
+
+<p class="notice--warning">다음 compound(2-methylbutane)에서 가장 끊기 쉬운 C-H 결합은 어느 탄소에 연결되어 있는지 표시하여라.
+<img src="http://localhost:4000/images/post/ochem/3-02.png" alt="3-02" class="align-center" width="150" /></p>
+:ET

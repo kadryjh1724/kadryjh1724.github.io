@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-12-09T01:49:35+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jiho Son (kadryjh1724)</title><subtitle>Some scientific scribbles.</subtitle><author><name>Jiho Son</name></author><entry><title type="html">Reactions of alkanes</title><link href="http://localhost:4000/ochem/ochem-002/" rel="alternate" type="text/html" title="Reactions of alkanes" /><published>2021-12-08T00:00:00+09:00</published><updated>2021-12-08T00:00:00+09:00</updated><id>http://localhost:4000/ochem/ochem-002</id><content type="html" xml:base="http://localhost:4000/ochem/ochem-002/">&lt;p&gt;이 포스팅에서는 가장 간단한 유기화학 반응 중 하나인 radical halogenation에 대해 다룬다.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-12-09T13:00:12+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jiho Son (kadryjh1724)</title><subtitle>Some scientific scribbles.</subtitle><author><name>Jiho Son</name></author><entry><title type="html">Reactions of alkanes</title><link href="http://localhost:4000/ochem/ochem-002/" rel="alternate" type="text/html" title="Reactions of alkanes" /><published>2021-12-08T00:00:00+09:00</published><updated>2021-12-08T00:00:00+09:00</updated><id>http://localhost:4000/ochem/ochem-002</id><content type="html" xml:base="http://localhost:4000/ochem/ochem-002/">&lt;p&gt;이 포스팅에서는 가장 간단한 유기화학 반응 중 하나인 radical halogenation에 대해 다룬다.&lt;/p&gt;
 
 &lt;p class=&quot;notice--info&quot;&gt;Reference 기준으로 Chapter 3의 내용을 다룬다. 이미 preface에서 언급했듯이, Chapter 1과 2의 내용은 이미 잘 알고 있다는 가정 하에 포스팅을 작성할 예정이다. 어디까지나 나의 복습을 위한 것이므로 내가 기억해두고 싶은 것들을 위주로 작성할 예정이며, 교과서에 실린 모든 내용이 실려 있지 않을 수 있다는 점은 항상 유의하자.&lt;/p&gt;
 
@@ -46,9 +46,11 @@
   &lt;p&gt;\(\sigma\) electron pair와 empty &lt;em&gt;p&lt;/em&gt; orbital 사이의 &lt;strong&gt;hyperconjugation&lt;/strong&gt;이 radical을 안정화한다. 주변의 substituent가 많아서 가능한 hyperconjugation이 늘어나면 radical의 안정성이 더욱 증가한다.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p class=&quot;align-center&quot;&gt;&lt;img src=&quot;./images/post/ochem/3-01.png&quot; alt=&quot;3-01&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/images/post/ochem/3-01.png&quot; alt=&quot;3-01&quot; class=&quot;align-center&quot; width=&quot;400&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;halogens&quot;&gt;Halogens&lt;/h3&gt;
+&lt;h3 id=&quot;bde-of-halogen-compounds&quot;&gt;BDE of Halogen compounds&lt;/h3&gt;
+
+&lt;p&gt;Hydrogen halide 형태의 화합물들은 어떨까?&lt;/p&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -94,7 +96,20 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h3 id=&quot;exercise&quot;&gt;Exercise&lt;/h3&gt;</content><author><name>Jiho Son</name></author><category term="ochem" /><category term="organic chemistry" /><summary type="html">이 포스팅에서는 가장 간단한 유기화학 반응 중 하나인 radical halogenation에 대해 다룬다.</summary></entry><entry><title type="html">Organic Chemistry: The Beginning</title><link href="http://localhost:4000/ochem/ochem-001/" rel="alternate" type="text/html" title="Organic Chemistry: The Beginning" /><published>2021-12-06T00:00:00+09:00</published><updated>2021-12-06T00:00:00+09:00</updated><id>http://localhost:4000/ochem/ochem-001</id><content type="html" xml:base="http://localhost:4000/ochem/ochem-001/">## Preface
+&lt;h3 id=&quot;exercise&quot;&gt;Exercise&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;다음 compound(2-methylbutane)에서 가장 끊기 쉬운 C-H 결합은 어느 탄소에 연결되어 있는지 표시하여라.
+&lt;img src=&quot;http://localhost:4000/images/post/ochem/3-02.png&quot; alt=&quot;3-02&quot; class=&quot;align-center&quot; width=&quot;150&quot; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;2-chlorination-of-methane-the-radical-chain-mechanism&quot;&gt;2. Chlorination of methane: The Radical Chain Mechanism&lt;/h2&gt;
+
+&lt;p&gt;섭씨 300도 이상의 온도 또는 UV light 등의 조건이 주어진다면 methane은 다음과 같은 반응을 한다.&lt;/p&gt;
+
+\[\displaystyle{\mathrm{CH_{3}-H+Cl-Cl}\longrightarrow_{\Delta\,\text{or}\,h\nu}\mathrm{CH_{3}-Cl+H-Cl}}\]
+
+&lt;p&gt;위 반응의 mechanism은 &lt;strong&gt;radical chain mechanism&lt;/strong&gt;이라고 부른다. 빛이나 열 등의 원인으로 생성된 radical이 일으키는 연쇄 반응에 해당되며, 지금부터 그 mechanism을 자세히 살펴보자.&lt;/p&gt;</content><author><name>Jiho Son</name></author><category term="ochem" /><category term="organic chemistry" /><summary type="html">이 포스팅에서는 가장 간단한 유기화학 반응 중 하나인 radical halogenation에 대해 다룬다.</summary></entry><entry><title type="html">Organic Chemistry: The Beginning</title><link href="http://localhost:4000/ochem/ochem-001/" rel="alternate" type="text/html" title="Organic Chemistry: The Beginning" /><published>2021-12-06T00:00:00+09:00</published><updated>2021-12-06T00:00:00+09:00</updated><id>http://localhost:4000/ochem/ochem-001</id><content type="html" xml:base="http://localhost:4000/ochem/ochem-001/">## Preface
 
 I should mention this at first. Honestly speaking, I am not good at organic chemistry at all. In 2019, I took organic chemistry class in both spring and fall semester. However, knowledge was very volatile: a few years later, I can barely remember what I learned. While I am taking a year off the university, I decided to review undergraduate-level stuffs that I have learned. Therefore, my posts will be concentrated on the reactions I want (or need) to review.
 
