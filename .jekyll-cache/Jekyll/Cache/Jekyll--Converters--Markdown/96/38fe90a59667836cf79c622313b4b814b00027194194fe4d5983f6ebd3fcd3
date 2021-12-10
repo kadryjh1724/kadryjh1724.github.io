@@ -1,4 +1,4 @@
-I"B<p>이 포스팅에서는 가장 간단한 유기화학 반응 중 하나인 radical halogenation에 대해 다룬다.</p>
+I"j<p>이 포스팅에서는 가장 간단한 유기화학 반응 중 하나인 radical halogenation에 대해 다룬다.</p>
 
 <p class="notice--info">Reference 기준으로 Chapter 3의 내용을 다룬다. 이미 preface에서 언급했듯이, Chapter 1과 2의 내용은 이미 잘 알고 있다는 가정 하에 포스팅을 작성할 예정이다. 어디까지나 나의 복습을 위한 것이므로 내가 기억해두고 싶은 것들을 위주로 작성할 예정이며, 교과서에 실린 모든 내용이 실려 있지 않을 수 있다는 점은 항상 유의하자.</p>
 
@@ -98,7 +98,27 @@
 
 <h3 id="exercise">Exercise</h3>
 
-<p>다음 compound(2-methylbutane)에서 가장 끊기 쉬운 C-H 결합은 어느 탄소에 연결되어 있는지 표시하여라.</p>
+<blockquote>
+  <p>다음 compound(2-methylbutane)에서 가장 끊기 쉬운 C-H 결합은 어느 탄소에 연결되어 있는지 표시하여라.
+<img src="http://localhost:4000/images/post/ochem/3-02.png" alt="3-02" class="align-center" width="150" /></p>
+</blockquote>
 
-<p class="notice--warning"><img src="http://localhost:4000/images/post/ochem/3-02.png" alt="3-02" class="align-center" width="200" /></p>
+<h2 id="2-chlorination-of-methane-the-radical-chain-mechanism">2. Chlorination of methane: The Radical Chain Mechanism</h2>
+
+<p>섭씨 300도 이상의 온도 또는 UV light 등의 조건이 주어진다면 methane은 다음과 같은 반응을 한다.</p>
+
+<p><img src="http://localhost:4000/images/post/ochem/3-04.png" alt="3-04" class="align-center" width="600" /></p>
+
+<p>위 반응의 mechanism은 <strong>radical chain mechanism</strong>이라고 부른다. 빛이나 열 등의 원인으로 생성된 radical이 일으키는 연쇄 반응에 해당되며, 지금부터 그 mechanism을 자세히 살펴보자.</p>
+
+<p><strong>1. Initiation.</strong> 열이나 빛에 의해서 chlorine gas가 homolytic cleavage 과정을 거친다.</p>
+
+<p><img src="http://localhost:4000/images/post/ochem/3-05.png" alt="3-05" class="align-center" width="400" /></p>
+
+<p>모든 chlorine gas molecule이 radical이 될 필요는 없다. 극소량의 chlorine gas만 homolytic cleavage를 거쳐도 연쇄 반응을 통해서 반응이 진행될 것이기 때문.</p>
+
+<p><strong>2. Propagation.</strong></p>
+
+<p><img src="http://localhost:4000/images/post/ochem/3-06.png" alt="3-06" class="align-center" width="500" />
+<img src="http://localhost:4000/images/post/ochem/3-07.png" alt="3-07" class="align-center" width="500" /></p>
 :ET
