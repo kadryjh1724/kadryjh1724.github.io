@@ -1,4 +1,4 @@
-I"#<p>이 포스팅에서는 가장 간단한 유기화학 반응 중 하나인 radical halogenation에 대해 다룬다.</p>
+I"P#<p>이 포스팅에서는 가장 간단한 유기화학 반응 중 하나인 radical halogenation에 대해 다룬다.</p>
 
 <p class="notice--info">Reference 기준으로 Chapter 3의 내용을 다룬다. 이미 preface에서 언급했듯이, Chapter 1과 2의 내용은 이미 잘 알고 있다는 가정 하에 포스팅을 작성할 예정이다. 어디까지나 나의 복습을 위한 것이므로 내가 기억해두고 싶은 것들을 위주로 작성할 예정이며, 교과서에 실린 모든 내용이 실려 있지 않을 수 있다는 점은 항상 유의하자.</p>
 
@@ -119,9 +119,49 @@
 
 <p>모든 chlorine gas molecule이 radical이 될 필요는 없다. 극소량의 chlorine gas만 homolytic cleavage를 거쳐도 연쇄 반응을 통해서 반응이 진행될 것이기 때문. 이 반응은 당연하게도 <strong>흡열 반응</strong>(endothermic reaction)이다.</p>
 
-<p><strong>2. Propagation.</strong></p>
-
-<p>Initiation step에서 생성된 chlorine radical이 methane의 C-H 결합을 공격해 methyl radical을 생성한다. 그 methyl radical이 다른 \(\mathrm{Cl}_{2}\) molecule을 공격해 product인 chloromethane을 만들고, chlorine radical을 regenerate한다. 이러한 propagation 과정을 거쳐서 연쇄 반응이 일어난다. 첫 번째 propagation step은 slightly endothermic하므로 energetic하게는 slightly unfavorable하다. 그러나 두 번째 propagation step이 exothermic하므로, 전체 반응의 driving force가 된다.</p>
+<p><strong>2. Propagation.</strong> Initiation step에서 생성된 chlorine radical이 methane의 C-H 결합을 공격해 methyl radical을 생성한다. 그 methyl radical이 다른 \(\mathrm{Cl}_{2}\) molecule을 공격해 product인 chloromethane을 만들고, chlorine radical을 regenerate한다. 이러한 propagation 과정을 거쳐서 연쇄 반응이 일어난다. 첫 번째 propagation step은 slightly endothermic하므로 energetic하게는 slightly unfavorable하다. 그러나 두 번째 propagation step이 exothermic하므로, 전체 반응의 driving force가 된다.</p>
 
 <p><img src="http://localhost:4000/images/post/ochem/3-06.png" alt="3-06" class="align-center" width="600" /></p>
+
+<p><strong>3. Termination.</strong> Radical들이 모여서 다시 결합을 형성하며, 반응이 종결된다.</p>
+
+<p><img src="http://localhost:4000/images/post/ochem/3-07.png" alt="3-07" class="align-center" width="350" /></p>
+
+<h3 id="other-radical-halogenation-of-methane">Other radical halogenation of methane</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Reaction</th>
+      <th style="text-align: center">F (kcal/mol)</th>
+      <th style="text-align: center">Cl (kcal/mol)</th>
+      <th style="text-align: center">Br (kcal/mol)</th>
+      <th style="text-align: center">I (kcal/mol)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">\(\mathrm{X\cdot+CH_{4}\rightarrow\cdot{C}{H}_{3}+HX}\)</td>
+      <td style="text-align: center">-31</td>
+      <td style="text-align: center">+2</td>
+      <td style="text-align: center">+18</td>
+      <td style="text-align: center">+34</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">\(\mathrm{\cdot{C}H_{3}+X_{2}\rightarrow{C}{H}_{3}X+X\cdot}\)</td>
+      <td style="text-align: center">-72</td>
+      <td style="text-align: center">-27</td>
+      <td style="text-align: center">-24</td>
+      <td style="text-align: center">-21</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">\(\mathrm{\cdot{C}H_{4}+X_{2}\rightarrow{C}{H}_{3}X+HX}\)</td>
+      <td style="text-align: center">-103</td>
+      <td style="text-align: center">-25</td>
+      <td style="text-align: center">-6</td>
+      <td style="text-align: center">+13</td>
+    </tr>
+  </tbody>
+</table>
+
 :ET
