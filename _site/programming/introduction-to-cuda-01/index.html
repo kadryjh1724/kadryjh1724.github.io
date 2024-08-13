@@ -19,7 +19,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="commuteneko's blog">
 <meta property="og:title" content="Introduction to CUDA [1]">
-<meta property="og:url" content="http://localhost:4000/blog/programming/introduction-to-cuda-01/">
+<meta property="og:url" content="http://localhost:4000/programming/introduction-to-cuda-01/">
 
 
   <meta property="og:description" content="Introduction to CUDA C/C++">
@@ -41,7 +41,7 @@
   
 
 
-<link rel="canonical" href="http://localhost:4000/blog/programming/introduction-to-cuda-01/">
+<link rel="canonical" href="http://localhost:4000/programming/introduction-to-cuda-01/">
 
 
 
@@ -58,7 +58,7 @@
 
 
 
-  <link href="/blog/feed.xml" type="application/atom+xml" rel="alternate" title="commuteneko's blog Feed">
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="commuteneko's blog Feed">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <script type="text/javascript">
@@ -67,7 +67,7 @@
 </script>
 
 <!-- For all browsers -->
-<link rel="stylesheet" href="/blog/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/main.css">
 <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
 
@@ -97,7 +97,7 @@
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
         
-        <a class="site-title" href="/blog/">
+        <a class="site-title" href="/">
           commuteneko's blog
           <span class="site-subtitle">Personal Blog</span>
         </a>
@@ -138,7 +138,7 @@
     
       
         <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <a href="/blog/" itemprop="item"><span itemprop="name">Home</span></a>
+          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
 
           <meta itemprop="position" content="1" />
         </li>
@@ -147,7 +147,7 @@
       
         
         <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <a href="/blog/categories/#programming" itemprop="item"><span itemprop="name">Programming</span></a>
+          <a href="/categories/#programming" itemprop="item"><span itemprop="name">Programming</span></a>
           <meta itemprop="position" content="2" />
         </li>
         <span class="sep">/</span>
@@ -176,7 +176,7 @@
 
   <div class="author__content">
     <h3 class="author__name p-name" itemprop="name">
-      <a class="u-url" rel="me" href="http://localhost:4000/blog/" itemprop="url"></a>
+      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url"></a>
     </h3>
     
   </div>
@@ -262,7 +262,7 @@
       
         <header>
           <h1 id="page-title" class="page__title" itemprop="headline">
-            <a href="http://localhost:4000/blog/programming/introduction-to-cuda-01/" itemprop="url">Introduction to CUDA [1]
+            <a href="http://localhost:4000/programming/introduction-to-cuda-01/" itemprop="url">Introduction to CUDA [1]
 </a>
           </h1>
           
@@ -546,7 +546,7 @@ Max grid dim.           : (2147483647, 65535, 65535)
 
 <p>만약 GPU가 여러 개 있는 서버에 접속 중이라면, 여러 device의 정보가 순서대로 출력될 것이다.</p>
 
-<p>다음 포스팅에서는 host와 device에서의 memory allocation과 data transfer 문법에 대해 알아보고, 이를 이용한 매우 기초적인 예제를 다룰 예정이다. 또한, <strong>grid</strong>와 <strong>block</strong>이라는 매우 중요한 개념에 대해서도 알아볼 예정이다.</p>
+<p>다음 포스팅에서는 host와 device에서의 memory allocation과 data transfer 문법에 대해 알아보고, 이를 이용한 매우 기초적인 예제를 다룰 예정이다.</p>
 
         
       </section>
@@ -563,11 +563,11 @@ Max grid dim.           : (2147483647, 65535, 65535)
     <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
     <span itemprop="keywords">
     
-      <a href="/blog/tags/#c" class="page__taxonomy-item p-category" rel="tag">C</a><span class="sep">, </span>
+      <a href="/tags/#c" class="page__taxonomy-item p-category" rel="tag">C</a><span class="sep">, </span>
     
-      <a href="/blog/tags/#c" class="page__taxonomy-item p-category" rel="tag">C++</a><span class="sep">, </span>
+      <a href="/tags/#c" class="page__taxonomy-item p-category" rel="tag">C++</a><span class="sep">, </span>
     
-      <a href="/blog/tags/#cuda" class="page__taxonomy-item p-category" rel="tag">CUDA</a>
+      <a href="/tags/#cuda" class="page__taxonomy-item p-category" rel="tag">CUDA</a>
     
     </span>
   </p>
@@ -584,7 +584,7 @@ Max grid dim.           : (2147483647, 65535, 65535)
     <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
     <span itemprop="keywords">
     
-      <a href="/blog/categories/#programming" class="page__taxonomy-item p-category" rel="tag">Programming</a>
+      <a href="/categories/#programming" class="page__taxonomy-item p-category" rel="tag">Programming</a>
     
     </span>
   </p>
@@ -601,22 +601,23 @@ Max grid dim.           : (2147483647, 65535, 65535)
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Introduction+to+CUDA+%5B1%5D%20http%3A%2F%2Flocalhost%3A4000%2Fblog%2Fprogramming%2Fintroduction-to-cuda-01%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Introduction+to+CUDA+%5B1%5D%20http%3A%2F%2Flocalhost%3A4000%2Fprogramming%2Fintroduction-to-cuda-01%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fblog%2Fprogramming%2Fintroduction-to-cuda-01%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fprogramming%2Fintroduction-to-cuda-01%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/blog/programming/introduction-to-cuda-01/" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/programming/introduction-to-cuda-01/" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/blog/dl/example/" class="pagination--pager" title="Introduction to the Diffusion Models [1]
+      <a href="/dl/example/" class="pagination--pager" title="Introduction to the Diffusion Models [1]
 ">Previous</a>
     
     
-      <a href="#" class="pagination--pager disabled">Next</a>
+      <a href="/programming/introduction-to-cuda-02/" class="pagination--pager" title="Introduction to CUDA [2]
+">Next</a>
     
   </nav>
 
@@ -643,7 +644,49 @@ Max grid dim.           : (2147483647, 65535, 65535)
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/blog/dl/example/" rel="permalink">Introduction to the Diffusion Models [1]
+        <a href="/programming/introduction-to-cuda-02/" rel="permalink">Introduction to CUDA [2]
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Host-device interaction
+
+</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/dl/example/" rel="permalink">Introduction to the Diffusion Models [1]
 </a>
       
     </h2>
@@ -715,7 +758,7 @@ Max grid dim.           : (2147483647, 65535, 65535)
     
 
     
-      <li><a href="/blog/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
     
   </ul>
 </div>
@@ -726,7 +769,7 @@ Max grid dim.           : (2147483647, 65535, 65535)
     </div>
 
     
-  <script src="/blog/assets/js/main.min.js"></script>
+  <script src="/assets/js/main.min.js"></script>
 
 
 

@@ -23,7 +23,7 @@ subtitle                 : "Personal Blog"
 name                     : "Jiho Son"
 description              : "Scribbles about computational chemistry and deep learning."
 url                      : "https://kadryjh1724.github.io"
-baseurl                  : "/blog"
+baseurl                  : 
 repository               : "kadryjh1724/kadryjh1724.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"

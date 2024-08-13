@@ -1,4 +1,64 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog/" rel="alternate" type="text/html" /><updated>2024-08-09T17:08:20+09:00</updated><id>http://localhost:4000/blog/feed.xml</id><title type="html">commuteneko’s blog</title><subtitle>Scribbles about computational chemistry and deep learning.</subtitle><author><name>Jiho Son</name></author><entry><title type="html">Introduction to CUDA [1]</title><link href="http://localhost:4000/blog/programming/introduction-to-cuda-01/" rel="alternate" type="text/html" title="Introduction to CUDA [1]" /><published>2024-08-09T00:00:00+09:00</published><updated>2024-08-09T00:00:00+09:00</updated><id>http://localhost:4000/blog/programming/introduction-to-cuda-01</id><content type="html" xml:base="http://localhost:4000/blog/programming/introduction-to-cuda-01/"><![CDATA[<h1 id="introduction-to-cuda-cc">Introduction to CUDA C/C++</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-08-13T16:59:46+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">commuteneko’s blog</title><subtitle>Scribbles about computational chemistry and deep learning.</subtitle><author><name>Jiho Son</name></author><entry><title type="html">Introduction to CUDA [2]</title><link href="http://localhost:4000/programming/introduction-to-cuda-02/" rel="alternate" type="text/html" title="Introduction to CUDA [2]" /><published>2024-08-12T00:00:00+09:00</published><updated>2024-08-12T00:00:00+09:00</updated><id>http://localhost:4000/programming/introduction-to-cuda-02</id><content type="html" xml:base="http://localhost:4000/programming/introduction-to-cuda-02/"><![CDATA[<h1 id="host-device-interaction">Host-device interaction</h1>
+
+<p>이전 포스팅에서 다루었듯이, host와 device는 물리적으로 분리되어 있다. 따라서, host와 device는 독립적인 메모리를 가지고 있으며, memory allocation 역시 host와 device에서 각각 진행해야 한다. 뿐만 아니라, host와 device 사이에서 데이터를 교환하는 것 역시 자명하지 않다. 이번 포스팅에서는 host와 device에서의 memory allocation과 데이터 교환을 위해 제공되는 CUDA C/C++ 함수들을 다룰 예정이다. 매우 간단한 예제를 통해서 중요한 몇몇 함수들을 배워 보자.</p>
+
+<h1 id="cuda-cc-basic-example-3-adding-with-gpu">CUDA C/C++ Basic Example (3): Adding with GPU</h1>
+
+<p>다음 예제 코드는 매우 간단한 덧셈 연산을 GPU에서 수행하는 코드이다. 중요한 것은, 사용자가 키보드를 통해 입력하는 input은 host의 memory 위로 올라간다는 사실이다. GPU는 이 input을 알지 못하며, 덧셈을 위한 두 input 숫자를 명시적으로 GPU 메모리로 전송시켜 주어야 한다.</p>
+
+<p>GPU 메모리로 이 숫자들을 무작정 전달하는 것이 아니라, 숫자들이 들어갈 메모리 공간을 미리 allocate해야 한다. 이 점을 고려해서 코드를 살펴 보자. 해당 코드는 “예제로 배우는 CUDA 프로그래밍” 책의 코드를 거의 참고해 작성되었다. <a href="https://github.com/kadryjh1724/cudaExamples/blob/main/part2/code02-GPUadd.cu">GitHub repo로 이동</a></p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+</pre></td><td class="rouge-code"><pre><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">"cuda_runtime.h"</span><span class="cp">
+#include</span> <span class="cpf">"device_launch_parameters.h"</span><span class="cp">
+</span>
+<span class="n">__global__</span> <span class="kt">void</span> <span class="nf">add</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">,</span> <span class="kt">int</span> <span class="o">*</span><span class="n">c</span><span class="p">)</span> <span class="p">{</span>
+    <span class="o">*</span><span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="o">*</span><span class="n">d_c</span><span class="p">;</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"Input two integers: "</span><span class="p">);</span>
+    <span class="n">scanf</span><span class="p">(</span><span class="s">"%d %d"</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">);</span>
+    <span class="c1">// Assign device memory</span>
+    <span class="n">cudaMalloc</span><span class="p">((</span><span class="kt">void</span><span class="o">**</span><span class="p">)</span><span class="o">&amp;</span><span class="n">d_c</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">));</span>
+    <span class="c1">// Kernel call</span>
+    <span class="n">add</span><span class="o">&lt;&lt;&lt;</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="o">&gt;&gt;&gt;</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">d_c</span><span class="p">);</span>
+    <span class="c1">// Copy the result</span>
+    <span class="n">cudaMemcpy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">c</span><span class="p">,</span> <span class="n">d_c</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">),</span> <span class="n">cudaMemcpyDeviceToHost</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"%d + %d = %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">);</span>
+    <span class="c1">// Free device memory</span>
+    <span class="n">cudaFree</span><span class="p">(</span><span class="n">d_c</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>이 코드 안에는</p>]]></content><author><name>Jiho Son</name></author><category term="Programming" /><category term="CUDA" /><category term="C" /><category term="C++" /><summary type="html"><![CDATA[Host-device interaction]]></summary></entry><entry><title type="html">Introduction to CUDA [1]</title><link href="http://localhost:4000/programming/introduction-to-cuda-01/" rel="alternate" type="text/html" title="Introduction to CUDA [1]" /><published>2024-08-09T00:00:00+09:00</published><updated>2024-08-09T00:00:00+09:00</updated><id>http://localhost:4000/programming/introduction-to-cuda-01</id><content type="html" xml:base="http://localhost:4000/programming/introduction-to-cuda-01/"><![CDATA[<h1 id="introduction-to-cuda-cc">Introduction to CUDA C/C++</h1>
 
 <p>CUDA C/C++를 공부하고 간단한 계산에 적용해 보는 과정을 포스팅으로 남길 예정이다. CUDA C/C++를 공부하는 방법에는 여러 가지가 있다. 시중에 CUDA C/C++를 다루는 책도 여러 권 나와 있다 (한국어 화자인 나 역시 처음에는 이런 책들을 참고해 공부하고 있다). 하지만 무엇보다 CUDA C/C++를 공부할 때의 golden standard는 NVIDIA가 제공하는 <a href="https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html">CUDA C++ Programming Guide</a>를 참고하는 것인 만큼, 조금 CUDA와 친해졌다면 공식 매뉴얼을 참조해 공부하도록 하자.</p>
 
@@ -246,10 +306,12 @@ Max grid dim.           : (2147483647, 65535, 65535)
 
 <p>만약 GPU가 여러 개 있는 서버에 접속 중이라면, 여러 device의 정보가 순서대로 출력될 것이다.</p>
 
-<p>다음 포스팅에서는 host와 device에서의 memory allocation과 data transfer 문법에 대해 알아보고, 이를 이용한 매우 기초적인 예제를 다룰 예정이다. 또한, <strong>grid</strong>와 <strong>block</strong>이라는 매우 중요한 개념에 대해서도 알아볼 예정이다.</p>]]></content><author><name>Jiho Son</name></author><category term="Programming" /><category term="CUDA" /><category term="C" /><category term="C++" /><summary type="html"><![CDATA[Introduction to CUDA C/C++]]></summary></entry><entry><title type="html">Introduction to the Diffusion Models [1]</title><link href="http://localhost:4000/blog/dl/example/" rel="alternate" type="text/html" title="Introduction to the Diffusion Models [1]" /><published>2024-08-08T00:00:00+09:00</published><updated>2024-08-08T00:00:00+09:00</updated><id>http://localhost:4000/blog/dl/example</id><content type="html" xml:base="http://localhost:4000/blog/dl/example/"><![CDATA[<p>Mathjax test</p>
+<p>다음 포스팅에서는 host와 device에서의 memory allocation과 data transfer 문법에 대해 알아보고, 이를 이용한 매우 기초적인 예제를 다룰 예정이다.</p>]]></content><author><name>Jiho Son</name></author><category term="Programming" /><category term="CUDA" /><category term="C" /><category term="C++" /><summary type="html"><![CDATA[Introduction to CUDA C/C++]]></summary></entry><entry><title type="html">Introduction to the Diffusion Models [1]</title><link href="http://localhost:4000/dl/example/" rel="alternate" type="text/html" title="Introduction to the Diffusion Models [1]" /><published>2024-08-08T00:00:00+09:00</published><updated>2024-08-08T00:00:00+09:00</updated><id>http://localhost:4000/dl/example</id><content type="html" xml:base="http://localhost:4000/dl/example/"><![CDATA[<p>Mathjax test</p>
 
 \[\int_{0}^{T}\lambda(t)\mathbb{E}_{0}\mathbb{E}_{X_{t}|X_{0}}\left[s_{\theta}(X_{t},t)-\nabla_{X_{t}}\log p_{t|0}(X_{t}|X_{0})^{2}\right]\]
 
 <p>Test 2</p>
 
-<p>\[ a(s) = \frac{\partial\mathcal{L}}{\partial z(s)} \]</p>]]></content><author><name>Jiho Son</name></author><category term="DL" /><category term="DL" /><category term="diffusion" /><summary type="html"><![CDATA[Mathjax test]]></summary></entry></feed>
+<p>\[ a(s) = \frac{\partial\mathcal{L}}{\partial z(s)} \]</p>
+
+<p>To be deleted later.</p>]]></content><author><name>Jiho Son</name></author><category term="DL" /><category term="DL" /><category term="diffusion" /><summary type="html"><![CDATA[Mathjax test]]></summary></entry></feed>
