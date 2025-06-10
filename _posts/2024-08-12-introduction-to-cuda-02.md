@@ -1,7 +1,6 @@
 ---
 title: Introduction to CUDA [2]
 subtitle: CUDA memory allocation syntaxes
-author: Jiho Son
 categories: Programming
 tags: CUDA C C++
 toc: true

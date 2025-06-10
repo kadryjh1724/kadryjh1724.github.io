@@ -1,7 +1,8 @@
 ---
-title: "About"
+title: "About me"
 permalink: /about/
 layout: single
 ---
 
-Sans bruh gang
+Jiho Son
+

@@ -1,11 +1,11 @@
 ---
 title: Introduction to CUDA [1]
 subtitle: Concept of GPUs and CUDA hello world code
-author: Jiho Son
 categories: Programming
 tags: CUDA C C++
 toc: true
 toc_sticky: true
+author_profile: true
 ---
 
 # Introduction to CUDA C/C++
