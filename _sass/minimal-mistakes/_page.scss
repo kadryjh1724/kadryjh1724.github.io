@@ -39,13 +39,13 @@ body {
     float: inline-end;
     width: calc(100% - #{$right-sidebar-width-narrow});
     padding-inline-end: $right-sidebar-width-narrow;
-    padding-inline-start: 1em;
+    padding-inline-start: 2em;
   }
 
   @include breakpoint($x-large) {
     width: calc(100% - #{$right-sidebar-width});
     padding-inline-end: $right-sidebar-width;
-    padding-inline-start: 2em;
+    padding-inline-start: 4em;
   }
 
   .page__inner-wrap {
@@ -54,10 +54,10 @@ body {
     margin-inline: 0;
     width: 100%;
     clear: both;
-    padding-inline: 0.5em;
+    padding-inline: 1em;
 
     @include breakpoint($large) {
-      padding-inline: 1em;
+      padding-inline: 2em;
     }
 
     .page__content,
