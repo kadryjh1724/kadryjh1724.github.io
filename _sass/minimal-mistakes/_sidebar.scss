@@ -80,7 +80,7 @@
     inset-inline-end: 0;
     width: $right-sidebar-width-narrow;
     margin-inline-end: -1 * $right-sidebar-width-narrow;
-    padding-inline-start: 1em;
+    padding-inline-start: 0.5em;
     z-index: 10;
 
     &.sticky {
