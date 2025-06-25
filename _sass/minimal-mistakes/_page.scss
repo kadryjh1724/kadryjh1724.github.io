@@ -86,6 +86,14 @@ body {
   }
 }
 
+.page__subtitle {
+  margin-top: 0;
+  margin-bottom: 1em;
+  font-size: $type-size-4;
+  color: $muted-text-color;
+  font-style: italic;
+}
+
 .page__lead {
   font-family: $global-font-family;
   font-size: $type-size-4;

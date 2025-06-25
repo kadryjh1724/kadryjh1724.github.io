@@ -5,14 +5,42 @@ search: false
 
 @charset "utf-8";
 
+// 사이드바 너비를 조금 줄임
+$right-sidebar-width-narrow: 150px !default;  // 200px에서 150px로 줄임
+$right-sidebar-width: 220px !default;         // 280px에서 220px로 줄임
+$right-sidebar-width-wide: 350px !default;    // 400px에서 350px로 줄임
+$max-width: 1400px !default;
+
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
 // Custom CSS for page margins
+.page {
+  @include breakpoint($large) {
+    padding-inline-start: 1em;
+  }
+
+  @include breakpoint($x-large) {
+    padding-inline-start: 2em;
+  }
+
+  .page__inner-wrap {
+    @include breakpoint($large) {
+      padding-inline: 1em;
+    }
+  }
+}
+
+// 추가로 본문 내용의 최대 너비를 늘리기 (선택사항)
 .page__content {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2em;
+  max-width: none; // 기본 제한 해제
+}
+
+// 전체 컨테이너 최대 너비 조정
+#main {
+  @include breakpoint($x-large) {
+    max-width: 1700px; // 1800px에서 1700px로 줄임
+  }
 }
 
 @media (max-width: 64em) {

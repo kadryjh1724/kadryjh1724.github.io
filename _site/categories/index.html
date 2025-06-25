@@ -78,6 +78,33 @@
 
 <!-- insert favicons. use https://realfavicongenerator.net/ -->
 
+<!-- MathJax Configuration -->
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true,
+      packages: ['base', 'ams', 'noerrors', 'noundefined']
+    },
+    options: {
+      ignoreHtmlClass: 'tex2jax_ignore',
+      processHtmlClass: 'tex2jax_process'
+    },
+    startup: {
+      pageReady: () => {
+        return MathJax.startup.defaultPageReady().then(() => {
+          console.log('MathJax is loaded');
+        });
+      }
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
 <!-- end custom head snippets -->
 
   </head>
@@ -184,6 +211,14 @@
         </li>
       
     
+      
+        <li>
+          <a href="#measure-theory">
+            <strong>Measure Theory</strong> <span class="taxonomy__count">1</span>
+          </a>
+        </li>
+      
+    
   
 </ul>
 
@@ -209,6 +244,9 @@
       
     </h2>
     
+      <p class="archive__item-subtitle">Simple toy model for the irreversibility</p>
+    
+    
 
   <p class="page__meta">
     
@@ -230,6 +268,60 @@
 
 
     <p class="archive__item-excerpt" itemprop="description">Blah Blah
+</p>
+  </article>
+</div>
+
+          
+        </div>
+        <a href="#page-title" class="back-to-top">Back to top &uarr;</a>
+      </section>
+    
+  
+    
+      <section id="measure-theory" class="taxonomy__section">
+        <h2 class="archive__subtitle">Measure Theory</h2>
+        <div class="entries-list">
+          
+            
+
+
+
+<div class="list__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/measure%20theory/MTP01/" rel="permalink">[MTP] 1-1. Algebra and $\sigma$-algebra
+</a>
+      
+    </h2>
+    
+      <p class="archive__item-subtitle">Measure Theory and Probability: 1. Measure Spaces</p>
+    
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          7 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Chapter 1. Measure Spaces
+
 </p>
   </article>
 </div>

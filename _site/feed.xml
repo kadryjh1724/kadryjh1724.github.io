@@ -1,1 +1,232 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-06-16T18:05:41+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">commuteneko’s blog</title><subtitle>Scribbles about computational chemistry and deep learning.</subtitle><author><name>Jiho Son</name></author><entry><title type="html">Kac ring model</title><link href="http://localhost:4000/nonequilibrium%20statistical%20mechanics/Kac-ring-model/" rel="alternate" type="text/html" title="Kac ring model" /><published>2025-06-13T00:00:00+09:00</published><updated>2025-06-13T00:00:00+09:00</updated><id>http://localhost:4000/nonequilibrium%20statistical%20mechanics/Kac-ring-model</id><content type="html" xml:base="http://localhost:4000/nonequilibrium%20statistical%20mechanics/Kac-ring-model/"><![CDATA[<p>Blah Blah</p>]]></content><author><name>Jiho Son</name></author><category term="Nonequilibrium Statistical Mechanics" /><category term="nonequilibrium" /><category term="Python" /><summary type="html"><![CDATA[Blah Blah]]></summary></entry></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-06-25T17:49:33+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">commuteneko’s blog</title><subtitle>Scribbles about computational chemistry and deep learning.</subtitle><author><name>Jiho Son</name></author><entry><title type="html">[MTP] 1-1. Algebra and $\sigma$-algebra</title><link href="http://localhost:4000/measure%20theory/MTP01/" rel="alternate" type="text/html" title="[MTP] 1-1. Algebra and $\sigma$-algebra" /><published>2025-06-24T00:00:00+09:00</published><updated>2025-06-24T00:00:00+09:00</updated><id>http://localhost:4000/measure%20theory/MTP01</id><content type="html" xml:base="http://localhost:4000/measure%20theory/MTP01/"><![CDATA[<h1 id="chapter-1-measure-spaces">Chapter 1. Measure Spaces</h1>
+
+<h2 id="1-1-algebra-and-sigma-algebra">1-1. Algebra and $\sigma$-algebra</h2>
+
+<p>Let $S$ be a set without any given topology and $\mathcal{P}(S) = { A \mid A \subseteq S }$ be a power set of $S$.<br /><br />
+<span style="background-color:#fff5b1"><strong>Definition 1.1.1</strong></span> The collection of sets $\Sigma_{0} \subseteq \mathcal{P}(S)$ is called an <span style="background-color:#ffdce0">algebra on $S$</span> if</p>
+
+<ul>
+  <li>(i) $S \in \Sigma_{0}$</li>
+  <li>(ii) $F \in \Sigma_{0} \;\Longrightarrow\; F^{c} = S \setminus F \in \Sigma_{0}$</li>
+  <li>(iii) $F, G \in \Sigma_{0} \;\Longrightarrow\; F \cup G \in \Sigma_{0}$</li>
+</ul>
+
+<p><span style="background-color:#fff5b1"><strong>Remark 1.1.2</strong></span> From (i) and (ii), $\varnothing \in \Sigma_{0}$. Moreover, if $F,G \in \Sigma_{0}$,</p>
+
+\[F \cap G = (F^{c} \cup G^{c})^{c} \in \Sigma_{0} \;\text{and}\; F \setminus G = F \cap G^{c} \in \Sigma_{0}\]
+
+<p>Hence, algebra on $S$ is closed under the set operations.</p>
+
+<p><span style="background-color:#fff5b1"><strong>Remark 1.1.3</strong></span> By (iii), algebra is closed under <em>finite</em> union of members of itself.</p>
+
+<hr />
+
+<p><span style="background-color:#fff5b1"><strong>Definition 1.1.4</strong></span> An algebra $\Sigma \subseteq \mathcal{P}(S)$ is called a <span style="background-color:#ffdce0">$\sigma$-algebra on $S$</span> if it is closed under <em>countable</em> union of members of $\Sigma$.</p>
+
+\[F_{n} \in \Sigma \; (n \in \mathbb{N}) \;\Longrightarrow\; \bigcup_{n=1}^{\infty} F_{n} \in \Sigma\]
+
+<p><span style="background-color:#fff5b1"><strong>Remark 1.1.5</strong></span> If $\Sigma$ is a $\sigma$-algebra on $S$, then it is also closed under countable intersection of members</p>
+
+\[F_{n} \in \Sigma \; (n \in \mathbb{N}) \;\Longrightarrow\; \bigcap_{n=1}^{\infty} F_{n} \in \Sigma\]
+
+<p>since $\bigcap_{n=1}^{\infty} A_{n} = \left(\bigcup_{n=1}^{\infty}A_{n}^{c}\right)^{c}$.</p>
+
+<p><span style="background-color:#fff5b1"><strong>Definition 1.1.6</strong></span> A pair $(S, \Sigma)$ is called a <span style="background-color:#ffdce0">measurable space</span> if $\Sigma$ is a $\sigma$-algebra on $S$. The member $A \in \Sigma$ is called <span style="background-color:#ffdce0">$\Sigma$-measurable set</span>.</p>
+
+<p><span style="background-color:#fff5b1"><strong>Definition 1.1.7</strong></span> The set ${ \varnothing, S }$ and $\mathcal{P}(S)$ itself are trivial $\sigma$-algebras. For the fixed $A \subset S$,</p>
+
+\[\{ \varnothing, A, A^{c}, S \}\]
+
+<p>is one simple example of $\sigma$-algebra on $S$.</p>
+
+<hr />
+
+<p>Let’s prove some useful lemmas for later.</p>
+
+<p><span style="background-color:#fff5b1"><strong>Lemma 1.1.8</strong></span> Let $\Sigma$ be a $\sigma$-algebra on $S$ and $E \subset S$. Then $\Sigma_{E} := { E \cap A \mid A \in \Sigma }$ is a $\sigma$-algebra on $E$.</p>
+
+<p><strong>Proof.</strong></p>
+<ul>
+  <li>(i) $E = E \cap S \in \Sigma_{E}$ since $S \in \Sigma$.</li>
+  <li>(ii) Let $B \in \Sigma_{E}$. This implies $\exists A \in \Sigma$ such that $B = E \cap A$. Then $E \setminus B = E \cap A^{c}$ and $A^{c} \in \Sigma$ gives $E \setminus B \in \Sigma_{E}$.</li>
+  <li>
+    <p>(iii) Let ${B_{n}}<em>{n=1}^{\infty} \subset \Sigma</em>{E}$. Then $\exists A_{n} \; (n \in \mathbb{N}) \;\text{s.t.}\; B_{n} = E \cap A_{n}$ and</p>
+
+\[\bigcup_{n=1}^{\infty}B_{n} = \bigcup_{n=1}^{\infty}(E \cap A_{n}) = E \cap \underbrace{\left(\bigcup_{n=1}^{\infty}A_{n}\right)}_{\in \Sigma} \;\Longrightarrow\; \bigcup_{n=1}^{\infty}B_{n} \in \Sigma_{E}\]
+  </li>
+</ul>
+
+<p>So, $\Sigma_{E}$ becomes a $\sigma$-algebra on $E$. $\square$</p>
+
+<p><span style="background-color:#fff5b1"><strong>Lemma 1.1.9</strong></span> Let $\Sigma$ be a $\sigma$-algebra on $S$ and $f : E \rightarrow S$ be a surjective map from $E$ to $S$. Then $f^{-1}(\Sigma) := { f^{-1}(A) \mid A \in \Sigma }$ is a $\sigma$-algebra on $f^{-1}(S)$.</p>
+
+<p><strong>Proof.</strong></p>
+<ul>
+  <li>(i) $f^{-1}(S) = E \in f^{-1}(\Sigma)$ since $S \in \Sigma$.</li>
+  <li>
+    <p>(ii) Let $B \in f^{-1}(\Sigma)$. Then $\exists A \in \Sigma$ such that $f^{-1}(A) = B$. Then</p>
+
+\[E \setminus B = f^{-1}(S) \setminus f^{-1}(A) = f^{-1}(\underbrace{S \setminus A}_{\in \Sigma}) \in f^{-1}(\Sigma)\]
+  </li>
+  <li>
+    <p>(iii) Let ${B_{n}}<em>{n=1}^{\infty} \subset f^{-1}(\Sigma)$.Then $\exists A</em>{n} \; (n \in \mathbb{N}) \;\text{s.t.}\; f^{-1}(A_{n}) = B_{n}$ and</p>
+
+\[\bigcup_{n=1}^{\infty}B_{n} = \bigcup_{n=1}^{\infty}f^{-1}(A_{n}) = f^{-1}\underbrace{\left(\bigcup_{n=1}^{\infty}A_{n}\right)}_{\in \Sigma} \in f^{-1}(\Sigma)\]
+  </li>
+</ul>
+
+<p>So, $f^{-1}(\Sigma)$ becomes a $\sigma$-algebra on $E$. $\square$</p>
+
+<p><span style="background-color:#fff5b1"><strong>Lemma 1.1.10</strong></span> Arbitrary intersection of $\sigma$-algebras on $S$ is also a $\sigma$-algebra on $S$.</p>
+
+<p><strong>Proof.</strong> Let $\Sigma_{\alpha} \; (\alpha \in I)$ be $\sigma$-algebras on $S$. Now we want to show that $\bigcap_{\alpha \in I} \Sigma_{\alpha} := \tilde{\Sigma}$ is a $\sigma$-algebra on $S$.</p>
+
+<ul>
+  <li>(i) $S \in \Sigma_{\alpha} \; (\forall \alpha \in I) \;\Longrightarrow\; S \in \tilde{\Sigma}$</li>
+  <li>
+    <p>(ii) Let $E \in \tilde{\Sigma}$. Then $E \in \Sigma_{\alpha} \; (\forall \alpha \in I)$.</p>
+
+\[E \in \Sigma_{\alpha} \;\Longrightarrow\; S \setminus E \in \Sigma_{\alpha} \quad \forall \alpha \in I\]
+
+    <p>and $S \setminus E \in \tilde{\Sigma}$.</p>
+  </li>
+  <li>
+    <p>(iii) Let ${ E_{n} }_{n=1}^{\infty} \subset \tilde{\Sigma}$. Then</p>
+
+\[\{ E_{n} \}_{n=1}^{\infty} \subset \Sigma_{\alpha} \;\Longrightarrow\; \bigcup_{n=1}^{\infty} E_{n} \in \Sigma_{\alpha} \quad \forall \alpha \in I\]
+
+    <p>and $\bigcup_{n=1}^{\infty} E_{n} \in \tilde{\Sigma}$.</p>
+  </li>
+</ul>
+
+<p>So, $\tilde{\Sigma} = \bigcap_{\alpha \in I} \Sigma_{\alpha}$ is a $\sigma$-algebra on $S$. $\square$</p>
+
+<p><span style="background-color:#fff5b1"><strong>Remark 1.1.11</strong></span> Arbitrary union of $\sigma$-algebras may <em>not</em> be a $\sigma$-algebra. Let $S = {a, b, c}$ and choose two $\sigma$-algebras on $S$.</p>
+
+\[\Sigma_{1} = \{ \varnothing, \{a\}, \{b, c\}, S \} \;\text{and}\; \Sigma_{2} = \{ \varnothing, \{a, b\}, \{c\}, S \}\]
+
+<p>Then $\Sigma_{1} \cup \Sigma_{2}$ is not a $\sigma$-algebra since ${a} \cup {c} \notin \Sigma_{1}\cup\Sigma_{2}$.</p>
+
+<hr />
+
+<p>Now we define the tricky (for me) and important concept related to $\sigma$-algebras.</p>
+
+<p><span style="background-color:#fff5b1"><strong>Definition 1.1.12</strong></span> Let $\mathcal{C} \subset \mathcal{P}(S)$ be a class of subsets of $S$. Then $\sigma(\mathcal{C})$, <span style="background-color:#ffdce0">$\sigma$-algebra generated by $\mathcal{C}$</span>, is the smallest $\sigma$-algebra on $S$ containing $\mathcal{C}$.</p>
+
+<p><span style="background-color:#fff5b1"><strong>Example 1.1.13</strong></span> If $A \subset S$, $\sigma({ A }) = {\varnothing, A, A^{c}, S}$.</p>
+
+<p><span style="background-color:#fff5b1"><strong>Remark 1.1.14</strong></span> Let $\Sigma$ be $\sigma$-algebra on $S$. If $\mathcal{C} \subset \Sigma$, then $\mathcal{C} \subset \sigma(\mathcal{C}) \subset \Sigma$ by definition.</p>
+
+<p><span style="background-color:#fff5b1"><strong>Lemma 1.1.15</strong></span> Let $\mathcal{C} \subset \mathcal{P}(S)$. Then</p>
+
+\[\sigma(\mathcal{C}) = \bigcap_{\mathcal{C} \subset \Sigma} \Sigma \quad (\Sigma: \; \sigma\text{-algebra on }S)\]
+
+<p><strong>Proof.</strong> Firstly, $\mathcal{F} := \bigcap_{\mathcal{C} \subset \Sigma}\Sigma$ is <em>well-defined</em> since $\mathcal{P}(S)$ is a $\sigma$-algebra on $S$ with $\mathcal{C} \subset \mathcal{P}(S)$.</p>
+
+<ul>
+  <li>($\subseteq$) $\mathcal{C} \subset \mathcal{F}$. By <span style="background-color:#fff5b1"><strong>Lemma 1.1.10</strong></span>, $\mathcal{F}$ is a $\sigma$-algebra on $S$. Then by definition, $\sigma(\mathcal{C}) \subset \mathcal{F}$.</li>
+  <li>($\supseteq$) Suppose that $\mathcal{F}’$ is a $\sigma$-algebra containing $\mathcal{C}$. Then, by definition, $\mathcal{F} \subset \mathcal{F}’$. Hence, $\mathcal{F}$ is the smallest $\sigma$-algebra containing $\mathcal{C}$. $\square$</li>
+</ul>
+
+<p><span style="background-color:#fff5b1"><strong>Lemma 1.1.16</strong></span> Let $A, B \subset S$. Then
+\(A \subset \sigma(B) \;\text{and}\; B \subset \sigma(A) \;\Longrightarrow\; \sigma(A) = \sigma(B)\)</p>
+
+<p><strong>Proof.</strong> By <span style="background-color:#fff5b1"><strong>Lemma 1.1.15</strong></span>, $A \subset \sigma(B)$ implies $\sigma(A) \subset \sigma(B)$ and $B \subset \sigma(A)$ implies $\sigma(B) \subset \sigma(A)$. $\square$</p>
+
+<p><span style="background-color:#fff5b1"><strong>Lemma 1.1.17</strong></span> Let $A_{1}, A_{2}, \cdots, A_{n}$ be a <strong>partition</strong> of $S$:</p>
+
+\[A_{1}, \cdots, A_{n} \subset S, \; A_{i} \cap A_{j} = \varnothing \;(i \neq j), \; A_{1} \cup \cdots \cup A_{n} = S\]
+
+<p>Then $\sigma({A_{1}, \cdots, A_{n}}) = {B_{1} \cup \cdots \cup B_{n} \mid B_{i} = A_{i} \;\text{or}\; \varnothing, \; i = 1, 2, \cdots, n}$.</p>
+
+<p><strong>Proof.</strong> Note that RHS satisfies three conditions of $\sigma$-algebra (do it yourself).</p>
+<ul>
+  <li>($\subseteq$) Since RHS is $\sigma$-algebra and contain $A_{i}\;(i=1,2,\cdots,n)$, RHS should contain the smallest $\sigma$-algebra, $\sigma({A_{1}, \cdots, A_{n}})$.</li>
+  <li>($\supseteq$) Trivial(considering (iii) of <span style="background-color:#fff5b1"><strong>Definition 1.1.1</strong></span>).</li>
+</ul>
+
+<hr />
+
+<p><span style="background-color:#fff5b1"><strong>Definition 1.1.18</strong></span> A collection $\mathcal{T}$ of subsets of a set $S$ is said to be a <span style="background-color:#ffdce0">topology in $S$</span> if</p>
+
+<ul>
+  <li>(i) $\varnothing \in \mathcal{T}$ and $S \in \mathcal{T}$.</li>
+  <li>(ii) If ${ V_{i} }<em>{i=1}^{n} \subset \mathcal{T}$, then $V</em>{1} \cap \cdots V_{n} \in \mathcal{T}$.</li>
+  <li>(iii) If ${ V_{\alpha} }<em>{\alpha \in I}$ is an arbitrary collection of members of $\mathcal{T}$ (finite, countable or uncountable), then $\bigcup</em>{\alpha \in I} V_{\alpha} \in \mathcal{T}$.</li>
+</ul>
+
+<p>Then $S$ is called a <span style="background-color:#ffdce0">topological space</span>, and the members of $\mathcal{T}$ is called the <span style="background-color:#ffdce0">open sets in $S$</span>.</p>
+
+<p>Now, let $S$ be a topological space.</p>
+
+<p><span style="background-color:#fff5b1"><strong>Definition 1.1.19</strong></span> $\mathcal{B}(S)$, the <span style="background-color:#ffdce0">Borel $\sigma$-algebra on $S$</span>, is the $\sigma$-algebra generated by the family of open subsets of $S$.</p>
+
+\[\mathcal{B}(S) = \sigma(\{O \mid O \text{ is open in } S\})\]
+
+<p>If $S = \mathbb{R}$, we use the abbreviation $\mathcal{B}(\mathbb{R}) := \mathcal{B}$.</p>
+
+<p><span style="background-color:#fff5b1"><strong>Remark 1.1.20</strong></span> If you are not familiar with Borel sets, you may consider Borel sets as <em>all the reasonable sets for which we can measure the “length”</em>.</p>
+
+<p><span style="background-color:#fff5b1"><strong>Lemma 1.1.21</strong></span> Let $S = \mathbb{R}^{d}$. Then</p>
+
+\[\sigma(\{O \mid O \text{ is open in } S\}) = \sigma(\{F \mid F \text{ is compact in } S\})\]
+
+<p><strong>Proof.</strong> We will use <span style="background-color:#fff5b1"><strong>Lemma 1.1.16</strong></span> here. Also note that</p>
+
+\[S \text{ is compact} \;\Longleftrightarrow\; S \text{ is closed and bounded}\]
+
+<p>for $S \subset \mathbb{R}^{d}$, by Heine-Borel theorem.</p>
+
+<ul>
+  <li>
+    <p>($\supseteq$) If $F$ is compact in $\mathbb{R}^{d}$, then $F^{c}$ is open in $\mathbb{R}^{d}$. Therefore</p>
+
+\[F^{c} \in \sigma(\{O \mid O \text{ is open in } S\}) \;\Longrightarrow\; F \in \sigma(\{O \mid O \text{ is open in } S\})\]
+  </li>
+  <li>
+    <p>($\subseteq$) If $O$ is open in $\mathbb{R}^{d}$, then $O^{c}$ is closed in $\mathbb{R}^{d}$. Consider</p>
+
+\[F_{n} := O^{c} \cap \overline{B(0, n)}\]
+
+    <p>where $\overline{B(0,n)}$ is the closed ball with radius $n$ and center 0. Then $F_{n}$ is closed and bounded for all $n \in \mathbb{N}$, hence compact.</p>
+
+\[\{ F_{n} \}_{n=1}^{\infty} \subset \sigma(\{F \mid F \text{ is compact in } S\})\]
+
+    <p>So</p>
+
+\[O^{c} = \bigcup_{n=1}^{\infty} F_{n} \in \sigma(\{F \mid F \text{ is compact in } S\})\]
+
+    <p>and $O \in \sigma({F \mid F \text{ is compact in } S})$.</p>
+  </li>
+</ul>
+
+<p>Now <span style="background-color:#fff5b1"><strong>Lemma 1.1.16</strong></span> finishes the proof. $\square$</p>
+
+<hr />
+
+<p>The structure of $\mathcal{B}(S)$ is quite ambiguous and hard to grasp. In case of $S = \mathbb{R}$, there is a better way to construct the Borel $\sigma$-algebra.</p>
+
+<p><span style="background-color:#fff5b1"><strong>Lemma 1.1.22</strong></span> $\mathcal{B} = \sigma(\pi(\mathbb{R}))$ where $\pi(\mathbb{R}) = {(-\infty, x] \mid x \in \mathbb{R}}$.</p>
+
+<p><strong>Proof.</strong> We sometimes call $\pi(\mathbb{R})$ as <em>infinite rays</em>.</p>
+
+<ul>
+  <li>
+    <p>($\supseteq$) Let $x \in \mathbb{R}$. Then</p>
+
+\[(-\infty,x] = \bigcap_{n=1}^{\infty} (-\infty, x + \frac{1}{n}) \in \mathcal{B}\]
+
+    <p>in other words, infinite rays can be represented as countable intersection of open intervals. Since $\mathcal{B}$ is $\sigma$-algebra, $\mathcal{B} \supseteq \sigma(\pi(\mathbb{R}))$.</p>
+  </li>
+  <li>
+    <p>($\subseteq$) Let $A$ be a open set in $\mathbb{R}$. Then we can set open intervals ${I_{n}}_{n=1}^{\infty}$ such that</p>
+
+\[A = \bigcup_{n=1}^{\infty}I_{n} = \bigcup_{a,b\in\mathbb{Q},\;(a,b)\in A}(a,b)\]
+
+    <p>where</p>
+
+\[(a,b) = \bigcup_{n=1}^{\infty} (a, u_{n}) = \bigcup_{n=1}^{\infty}(-\infty, u_{n}] \cap (-\infty, a]^{c}\]
+
+    <p>for $u_{n} = b - (b-a)/2^{n}$. So $A \in \sigma(\pi(\mathbb{R}))$ and $\mathcal{B} \subseteq \sigma(\pi(\mathbb{R}))$. $\square$</p>
+  </li>
+</ul>]]></content><author><name>Jiho Son</name></author><category term="Measure Theory" /><category term="mathematics" /><category term="measure theory" /><summary type="html"><![CDATA[Chapter 1. Measure Spaces]]></summary></entry><entry><title type="html">Kac ring model</title><link href="http://localhost:4000/nonequilibrium%20statistical%20mechanics/Kac-ring-model/" rel="alternate" type="text/html" title="Kac ring model" /><published>2025-06-13T00:00:00+09:00</published><updated>2025-06-13T00:00:00+09:00</updated><id>http://localhost:4000/nonequilibrium%20statistical%20mechanics/Kac-ring-model</id><content type="html" xml:base="http://localhost:4000/nonequilibrium%20statistical%20mechanics/Kac-ring-model/"><![CDATA[<p>Blah Blah</p>]]></content><author><name>Jiho Son</name></author><category term="Nonequilibrium Statistical Mechanics" /><category term="nonequilibrium" /><category term="Python" /><summary type="html"><![CDATA[Blah Blah]]></summary></entry></feed>
