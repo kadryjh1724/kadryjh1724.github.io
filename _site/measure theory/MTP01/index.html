@@ -368,7 +368,7 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#chapter-1-measure-spaces">Chapter 1. Measure Spaces</a><ul><li><a href="#1-1-algebra-and-sigma-algebra">1-1. Algebra and $\sigma$-algebra</a></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#chapter-1-measure-spaces">Chapter 1. Measure Spaces</a><ul><li><a href="#1-1-algebra-and-sigma-algebra">1-1. Algebra and $\sigma$-algebra</a><ul><li><a href="#algebra">Algebra</a></li><li><a href="#sigma-algebra">$\sigma$-algebra</a></li><li><a href="#lemmas-related-to-sigma-algebras">Lemmas related to $\sigma$-algebras</a></li><li><a href="#generated-sigma-algebras">Generated $\sigma$-algebras</a></li><li><a href="#borel-sigma-algebra">Borel $\sigma$-algebra</a></li></ul></li></ul></li></ul>
             </nav>
           </aside>
         
@@ -376,7 +376,9 @@
 
 <h2 id="1-1-algebra-and-sigma-algebra">1-1. Algebra and $\sigma$-algebra</h2>
 
-<p>Let $S$ be a set without any given topology and $\mathcal{P}(S) = { A \mid A \subseteq S }$ be a power set of $S$.<br /><br />
+<h3 id="algebra">Algebra</h3>
+
+<p>Let $S$ be a set without any given topology and $\mathcal{P}(S) = \lbrace A \mid A \subseteq S \rbrace$ be a power set of $S$.<br /><br />
 <span style="background-color:#fff5b1"><strong>Definition 1.1.1</strong></span> The collection of sets $\Sigma_{0} \subseteq \mathcal{P}(S)$ is called an <span style="background-color:#ffdce0">algebra on $S$</span> if</p>
 
 <ul>
@@ -395,6 +397,8 @@
 
 <hr />
 
+<h3 id="sigma-algebra">$\sigma$-algebra</h3>
+
 <p><span style="background-color:#fff5b1"><strong>Definition 1.1.4</strong></span> An algebra $\Sigma \subseteq \mathcal{P}(S)$ is called a <span style="background-color:#ffdce0">$\sigma$-algebra on $S$</span> if it is closed under <em>countable</em> union of members of $\Sigma$.</p>
 
 \[F_{n} \in \Sigma \; (n \in \mathbb{N}) \;\Longrightarrow\; \bigcup_{n=1}^{\infty} F_{n} \in \Sigma\]
@@ -407,24 +411,26 @@
 
 <p><span style="background-color:#fff5b1"><strong>Definition 1.1.6</strong></span> A pair $(S, \Sigma)$ is called a <span style="background-color:#ffdce0">measurable space</span> if $\Sigma$ is a $\sigma$-algebra on $S$. The member $A \in \Sigma$ is called <span style="background-color:#ffdce0">$\Sigma$-measurable set</span>.</p>
 
-<p><span style="background-color:#fff5b1"><strong>Definition 1.1.7</strong></span> The set ${ \varnothing, S }$ and $\mathcal{P}(S)$ itself are trivial $\sigma$-algebras. For the fixed $A \subset S$,</p>
+<p><span style="background-color:#fff5b1"><strong>Definition 1.1.7</strong></span> The set $\lbrace \varnothing, S \rbrace$ and $\mathcal{P}(S)$ itself are trivial $\sigma$-algebras. For the fixed $A \subset S$,</p>
 
-\[\{ \varnothing, A, A^{c}, S \}\]
+\[\lbrace \varnothing, A, A^{c}, S \rbrace\]
 
 <p>is one simple example of $\sigma$-algebra on $S$.</p>
 
 <hr />
 
+<h3 id="lemmas-related-to-sigma-algebras">Lemmas related to $\sigma$-algebras</h3>
+
 <p>Let’s prove some useful lemmas for later.</p>
 
-<p><span style="background-color:#fff5b1"><strong>Lemma 1.1.8</strong></span> Let $\Sigma$ be a $\sigma$-algebra on $S$ and $E \subset S$. Then $\Sigma_{E} := { E \cap A \mid A \in \Sigma }$ is a $\sigma$-algebra on $E$.</p>
+<p><span style="background-color:#fff5b1"><strong>Lemma 1.1.8</strong></span> Let $\Sigma$ be a $\sigma$-algebra on $S$ and $E \subset S$. Then $\Sigma_{E} := \lbrace E \cap A \mid A \in \Sigma \rbrace$ is $\sigma$-algebra on $E$.</p>
 
 <p><strong>Proof.</strong></p>
 <ul>
   <li>(i) $E = E \cap S \in \Sigma_{E}$ since $S \in \Sigma$.</li>
   <li>(ii) Let $B \in \Sigma_{E}$. This implies $\exists A \in \Sigma$ such that $B = E \cap A$. Then $E \setminus B = E \cap A^{c}$ and $A^{c} \in \Sigma$ gives $E \setminus B \in \Sigma_{E}$.</li>
   <li>
-    <p>(iii) Let ${B_{n}}<em>{n=1}^{\infty} \subset \Sigma</em>{E}$. Then $\exists A_{n} \; (n \in \mathbb{N}) \;\text{s.t.}\; B_{n} = E \cap A_{n}$ and</p>
+    <p>(iii) Let $\lbrace B_{n}\rbrace_{n=1}^{\infty} \subset \Sigma_{E}$. Then $\exists A_{n} \; (n \in \mathbb{N}) \;\text{s.t.}\; B_{n} = E \cap A_{n}$ and</p>
 
 \[\bigcup_{n=1}^{\infty}B_{n} = \bigcup_{n=1}^{\infty}(E \cap A_{n}) = E \cap \underbrace{\left(\bigcup_{n=1}^{\infty}A_{n}\right)}_{\in \Sigma} \;\Longrightarrow\; \bigcup_{n=1}^{\infty}B_{n} \in \Sigma_{E}\]
   </li>
@@ -432,7 +438,7 @@
 
 <p>So, $\Sigma_{E}$ becomes a $\sigma$-algebra on $E$. $\square$</p>
 
-<p><span style="background-color:#fff5b1"><strong>Lemma 1.1.9</strong></span> Let $\Sigma$ be a $\sigma$-algebra on $S$ and $f : E \rightarrow S$ be a surjective map from $E$ to $S$. Then $f^{-1}(\Sigma) := { f^{-1}(A) \mid A \in \Sigma }$ is a $\sigma$-algebra on $f^{-1}(S)$.</p>
+<p><span style="background-color:#fff5b1"><strong>Lemma 1.1.9</strong></span> Let $\Sigma$ be a $\sigma$-algebra on $S$ and $f : E \rightarrow S$ be a surjective map from $E$ to $S$. Then $f^{-1}(\Sigma) := \lbrace f^{-1}(A) \mid A \in \Sigma \rbrace$ is a $\sigma$-algebra on $f^{-1}(S)$.</p>
 
 <p><strong>Proof.</strong></p>
 <ul>
@@ -443,7 +449,7 @@
 \[E \setminus B = f^{-1}(S) \setminus f^{-1}(A) = f^{-1}(\underbrace{S \setminus A}_{\in \Sigma}) \in f^{-1}(\Sigma)\]
   </li>
   <li>
-    <p>(iii) Let ${B_{n}}<em>{n=1}^{\infty} \subset f^{-1}(\Sigma)$.Then $\exists A</em>{n} \; (n \in \mathbb{N}) \;\text{s.t.}\; f^{-1}(A_{n}) = B_{n}$ and</p>
+    <p>(iii) Let $\lbrace B_{n}\rbrace_{n=1}^{\infty} \subset f^{-1}(\Sigma)$.Then $\exists A_{n} \; (n \in \mathbb{N}) \;\text{s.t.}\; f^{-1}(A_{n}) = B_{n}$ and</p>
 
 \[\bigcup_{n=1}^{\infty}B_{n} = \bigcup_{n=1}^{\infty}f^{-1}(A_{n}) = f^{-1}\underbrace{\left(\bigcup_{n=1}^{\infty}A_{n}\right)}_{\in \Sigma} \in f^{-1}(\Sigma)\]
   </li>
@@ -465,9 +471,9 @@
     <p>and $S \setminus E \in \tilde{\Sigma}$.</p>
   </li>
   <li>
-    <p>(iii) Let ${ E_{n} }_{n=1}^{\infty} \subset \tilde{\Sigma}$. Then</p>
+    <p>(iii) Let $\lbrace E_{n} \rbrace_{n=1}^{\infty} \subset \tilde{\Sigma}$. Then</p>
 
-\[\{ E_{n} \}_{n=1}^{\infty} \subset \Sigma_{\alpha} \;\Longrightarrow\; \bigcup_{n=1}^{\infty} E_{n} \in \Sigma_{\alpha} \quad \forall \alpha \in I\]
+\[\lbrace E_{n} \rbrace_{n=1}^{\infty} \subset \Sigma_{\alpha} \;\Longrightarrow\; \bigcup_{n=1}^{\infty} E_{n} \in \Sigma_{\alpha} \quad \forall \alpha \in I\]
 
     <p>and $\bigcup_{n=1}^{\infty} E_{n} \in \tilde{\Sigma}$.</p>
   </li>
@@ -475,19 +481,21 @@
 
 <p>So, $\tilde{\Sigma} = \bigcap_{\alpha \in I} \Sigma_{\alpha}$ is a $\sigma$-algebra on $S$. $\square$</p>
 
-<p><span style="background-color:#fff5b1"><strong>Remark 1.1.11</strong></span> Arbitrary union of $\sigma$-algebras may <em>not</em> be a $\sigma$-algebra. Let $S = {a, b, c}$ and choose two $\sigma$-algebras on $S$.</p>
+<p><span style="background-color:#fff5b1"><strong>Remark 1.1.11</strong></span> Arbitrary union of $\sigma$-algebras may <em>not</em> be a $\sigma$-algebra. Let $S = \lbrace a, b, c\rbrace$ and choose two $\sigma$-algebras on $S$.</p>
 
-\[\Sigma_{1} = \{ \varnothing, \{a\}, \{b, c\}, S \} \;\text{and}\; \Sigma_{2} = \{ \varnothing, \{a, b\}, \{c\}, S \}\]
+\[\Sigma_{1} = \lbrace \varnothing, \lbrace a\rbrace, \lbrace b, c\rbrace, S \rbrace \;\text{and}\; \Sigma_{2} = \lbrace \varnothing, \lbrace a, b\rbrace, \lbrace c\rbrace, S \rbrace\]
 
-<p>Then $\Sigma_{1} \cup \Sigma_{2}$ is not a $\sigma$-algebra since ${a} \cup {c} \notin \Sigma_{1}\cup\Sigma_{2}$.</p>
+<p>Then $\Sigma_{1} \cup \Sigma_{2}$ is not a $\sigma$-algebra since $\lbrace a\rbrace \cup \lbrace c\rbrace \notin \Sigma_{1}\cup\Sigma_{2}$.</p>
 
 <hr />
+
+<h3 id="generated-sigma-algebras">Generated $\sigma$-algebras</h3>
 
 <p>Now we define the tricky (for me) and important concept related to $\sigma$-algebras.</p>
 
 <p><span style="background-color:#fff5b1"><strong>Definition 1.1.12</strong></span> Let $\mathcal{C} \subset \mathcal{P}(S)$ be a class of subsets of $S$. Then $\sigma(\mathcal{C})$, <span style="background-color:#ffdce0">$\sigma$-algebra generated by $\mathcal{C}$</span>, is the smallest $\sigma$-algebra on $S$ containing $\mathcal{C}$.</p>
 
-<p><span style="background-color:#fff5b1"><strong>Example 1.1.13</strong></span> If $A \subset S$, $\sigma({ A }) = {\varnothing, A, A^{c}, S}$.</p>
+<p><span style="background-color:#fff5b1"><strong>Example 1.1.13</strong></span> If $A \subset S$, $\sigma(\lbrace A \rbrace) = \lbrace\varnothing, A, A^{c}, S\rbrace$.</p>
 
 <p><span style="background-color:#fff5b1"><strong>Remark 1.1.14</strong></span> Let $\Sigma$ be $\sigma$-algebra on $S$. If $\mathcal{C} \subset \Sigma$, then $\mathcal{C} \subset \sigma(\mathcal{C}) \subset \Sigma$ by definition.</p>
 
@@ -511,22 +519,23 @@
 
 \[A_{1}, \cdots, A_{n} \subset S, \; A_{i} \cap A_{j} = \varnothing \;(i \neq j), \; A_{1} \cup \cdots \cup A_{n} = S\]
 
-<p>Then $\sigma({A_{1}, \cdots, A_{n}}) = {B_{1} \cup \cdots \cup B_{n} \mid B_{i} = A_{i} \;\text{or}\; \varnothing, \; i = 1, 2, \cdots, n}$.</p>
+<p>Then $\sigma(\lbrace A_{1}, \cdots, A_{n}\rbrace) = \lbrace B_{1} \cup \cdots \cup B_{n} \mid B_{i} = A_{i} \;\text{or}\; \varnothing, \; i = 1, 2, \cdots, n\rbrace$.</p>
 
 <p><strong>Proof.</strong> Note that RHS satisfies three conditions of $\sigma$-algebra (do it yourself).</p>
 <ul>
-  <li>($\subseteq$) Since RHS is $\sigma$-algebra and contain $A_{i}\;(i=1,2,\cdots,n)$, RHS should contain the smallest $\sigma$-algebra, $\sigma({A_{1}, \cdots, A_{n}})$.</li>
+  <li>($\subseteq$) Since RHS is $\sigma$-algebra and contain $A_{i}\;(i=1,2,\cdots,n)$, RHS should contain the smallest $\sigma$-algebra, $\sigma(\lbrace A_{1}, \cdots, A_{n}\rbrace)$.</li>
   <li>($\supseteq$) Trivial(considering (iii) of <span style="background-color:#fff5b1"><strong>Definition 1.1.1</strong></span>).</li>
 </ul>
 
 <hr />
+<h3 id="borel-sigma-algebra">Borel $\sigma$-algebra</h3>
 
 <p><span style="background-color:#fff5b1"><strong>Definition 1.1.18</strong></span> A collection $\mathcal{T}$ of subsets of a set $S$ is said to be a <span style="background-color:#ffdce0">topology in $S$</span> if</p>
 
 <ul>
   <li>(i) $\varnothing \in \mathcal{T}$ and $S \in \mathcal{T}$.</li>
-  <li>(ii) If ${ V_{i} }<em>{i=1}^{n} \subset \mathcal{T}$, then $V</em>{1} \cap \cdots V_{n} \in \mathcal{T}$.</li>
-  <li>(iii) If ${ V_{\alpha} }<em>{\alpha \in I}$ is an arbitrary collection of members of $\mathcal{T}$ (finite, countable or uncountable), then $\bigcup</em>{\alpha \in I} V_{\alpha} \in \mathcal{T}$.</li>
+  <li>(ii) If $\lbrace V_{i} \rbrace_{i=1}^{n} \subset \mathcal{T}$, then $V_{1} \cap \cdots V_{n} \in \mathcal{T}$.</li>
+  <li>(iii) If $\lbrace V_{\alpha} \rbrace_{\alpha \in I}$ is an arbitrary collection of members of $\mathcal{T}$ (finite, countable or uncountable), then $\bigcup_{\alpha \in I} V_{\alpha} \in \mathcal{T}$.</li>
 </ul>
 
 <p>Then $S$ is called a <span style="background-color:#ffdce0">topological space</span>, and the members of $\mathcal{T}$ is called the <span style="background-color:#ffdce0">open sets in $S$</span>.</p>
@@ -535,7 +544,7 @@
 
 <p><span style="background-color:#fff5b1"><strong>Definition 1.1.19</strong></span> $\mathcal{B}(S)$, the <span style="background-color:#ffdce0">Borel $\sigma$-algebra on $S$</span>, is the $\sigma$-algebra generated by the family of open subsets of $S$.</p>
 
-\[\mathcal{B}(S) = \sigma(\{O \mid O \text{ is open in } S\})\]
+\[\mathcal{B}(S) = \sigma(\lbrace O \mid O \text{ is open in } S\rbrace)\]
 
 <p>If $S = \mathbb{R}$, we use the abbreviation $\mathcal{B}(\mathbb{R}) := \mathcal{B}$.</p>
 
@@ -543,7 +552,7 @@
 
 <p><span style="background-color:#fff5b1"><strong>Lemma 1.1.21</strong></span> Let $S = \mathbb{R}^{d}$. Then</p>
 
-\[\sigma(\{O \mid O \text{ is open in } S\}) = \sigma(\{F \mid F \text{ is compact in } S\})\]
+\[\sigma(\lbrace O \mid O \text{ is open in } S\rbrace) = \sigma(\lbrace F \mid F \text{ is compact in } S\rbrace)\]
 
 <p><strong>Proof.</strong> We will use <span style="background-color:#fff5b1"><strong>Lemma 1.1.16</strong></span> here. Also note that</p>
 
@@ -555,7 +564,7 @@
   <li>
     <p>($\supseteq$) If $F$ is compact in $\mathbb{R}^{d}$, then $F^{c}$ is open in $\mathbb{R}^{d}$. Therefore</p>
 
-\[F^{c} \in \sigma(\{O \mid O \text{ is open in } S\}) \;\Longrightarrow\; F \in \sigma(\{O \mid O \text{ is open in } S\})\]
+\[F^{c} \in \sigma(\lbrace O \mid O \text{ is open in } S\rbrace) \;\Longrightarrow\; F \in \sigma(\lbrace O \mid O \text{ is open in } S\rbrace)\]
   </li>
   <li>
     <p>($\subseteq$) If $O$ is open in $\mathbb{R}^{d}$, then $O^{c}$ is closed in $\mathbb{R}^{d}$. Consider</p>
@@ -564,23 +573,21 @@
 
     <p>where $\overline{B(0,n)}$ is the closed ball with radius $n$ and center 0. Then $F_{n}$ is closed and bounded for all $n \in \mathbb{N}$, hence compact.</p>
 
-\[\{ F_{n} \}_{n=1}^{\infty} \subset \sigma(\{F \mid F \text{ is compact in } S\})\]
+\[\lbrace F_{n} \rbrace_{n=1}^{\infty} \subset \sigma(\lbrace F \mid F \text{ is compact in } S\rbrace)\]
 
     <p>So</p>
 
-\[O^{c} = \bigcup_{n=1}^{\infty} F_{n} \in \sigma(\{F \mid F \text{ is compact in } S\})\]
+\[O^{c} = \bigcup_{n=1}^{\infty} F_{n} \in \sigma(\lbrace F \mid F \text{ is compact in } S\rbrace)\]
 
-    <p>and $O \in \sigma({F \mid F \text{ is compact in } S})$.</p>
+    <p>and $O \in \sigma(\lbrace F \mid F \text{ is compact in } S\rbrace)$.</p>
   </li>
 </ul>
 
 <p>Now <span style="background-color:#fff5b1"><strong>Lemma 1.1.16</strong></span> finishes the proof. $\square$</p>
 
-<hr />
-
 <p>The structure of $\mathcal{B}(S)$ is quite ambiguous and hard to grasp. In case of $S = \mathbb{R}$, there is a better way to construct the Borel $\sigma$-algebra.</p>
 
-<p><span style="background-color:#fff5b1"><strong>Lemma 1.1.22</strong></span> $\mathcal{B} = \sigma(\pi(\mathbb{R}))$ where $\pi(\mathbb{R}) = {(-\infty, x] \mid x \in \mathbb{R}}$.</p>
+<p><span style="background-color:#fff5b1"><strong>Lemma 1.1.22</strong></span> $\mathcal{B} = \sigma(\pi(\mathbb{R}))$ where $\pi(\mathbb{R}) = \lbrace(-\infty, x] \mid x \in \mathbb{R}\rbrace$.</p>
 
 <p><strong>Proof.</strong> We sometimes call $\pi(\mathbb{R})$ as <em>infinite rays</em>.</p>
 
@@ -593,7 +600,7 @@
     <p>in other words, infinite rays can be represented as countable intersection of open intervals. Since $\mathcal{B}$ is $\sigma$-algebra, $\mathcal{B} \supseteq \sigma(\pi(\mathbb{R}))$.</p>
   </li>
   <li>
-    <p>($\subseteq$) Let $A$ be a open set in $\mathbb{R}$. Then we can set open intervals ${I_{n}}_{n=1}^{\infty}$ such that</p>
+    <p>($\subseteq$) Let $A$ be a open set in $\mathbb{R}$. Then we can set open intervals $\lbrace I_{n}\rbrace_{n=1}^{\infty}$ such that</p>
 
 \[A = \bigcup_{n=1}^{\infty}I_{n} = \bigcup_{a,b\in\mathbb{Q},\;(a,b)\in A}(a,b)\]
 
