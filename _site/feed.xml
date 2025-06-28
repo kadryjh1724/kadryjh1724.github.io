@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-06-28T16:03:41+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">commuteneko’s blog</title><subtitle>Scribbles about computational chemistry and deep learning.</subtitle><author><name>Jiho Son</name></author><entry><title type="html">[MTP] 1-2. Measure</title><link href="http://localhost:4000/measure%20theory/MTP02/" rel="alternate" type="text/html" title="[MTP] 1-2. Measure" /><published>2025-06-28T00:00:00+09:00</published><updated>2025-06-28T00:00:00+09:00</updated><id>http://localhost:4000/measure%20theory/MTP02</id><content type="html" xml:base="http://localhost:4000/measure%20theory/MTP02/"><![CDATA[<h1 id="chapter-1-measure-spaces">Chapter 1. Measure Spaces</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-06-28T16:15:36+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">commuteneko’s blog</title><subtitle>Scribbles about computational chemistry and deep learning.</subtitle><author><name>Jiho Son</name></author><entry><title type="html">[MTP] 1-2. Measure</title><link href="http://localhost:4000/measure%20theory/MTP02/" rel="alternate" type="text/html" title="[MTP] 1-2. Measure" /><published>2025-06-28T00:00:00+09:00</published><updated>2025-06-28T00:00:00+09:00</updated><id>http://localhost:4000/measure%20theory/MTP02</id><content type="html" xml:base="http://localhost:4000/measure%20theory/MTP02/"><![CDATA[<h1 id="chapter-1-measure-spaces">Chapter 1. Measure Spaces</h1>
 
 <h2 id="1-2-measure">1-2. Measure</h2>
 
@@ -18,7 +18,7 @@
 
 \[\mu_{0} \left(\bigcup_{n=1}^{\infty} F_{n}\right) = \sum_{n=1}^{\infty} \mu_{0}(F_{n})\]
 
-    <p>for $\lbrace F_{n} \rbrace_{n=1}^{\infty} \subset \Sigma_{0}$, $\bigcup_{n=1}^{\infty} F_{n} \in \Sigma_{0}$ and $F_{n} \cap F_{m} = \varnothing$ for $n \neq m$\dots</p>
+    <p>for $\lbrace F_{n} \rbrace_{n=1}^{\infty} \subset \Sigma_{0}$, $\bigcup_{n=1}^{\infty} F_{n} \in \Sigma_{0}$ and $F_{n} \cap F_{m} = \varnothing$ for $n \neq m$.</p>
   </li>
 </ul>
 
