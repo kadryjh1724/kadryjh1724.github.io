@@ -1,0 +1,833 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.26.2 by Michael Rose
+  Copyright 2013-2024 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en-US" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>[MTP] 1-2. Measure | commuteneko’s blog</title>
+<meta name="description" content="Chapter 1. Measure Spaces">
+
+
+  <meta name="author" content="Jiho Son">
+  
+  <meta property="article:author" content="Jiho Son">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="commuteneko's blog">
+<meta property="og:title" content="[MTP] 1-2. Measure">
+<meta property="og:url" content="http://localhost:4000/measure%20theory/MTP02/">
+
+
+  <meta property="og:description" content="Chapter 1. Measure Spaces">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2025-06-28T00:00:00+09:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/measure%20theory/MTP02/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="commuteneko's blog Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script type="text/javascript">
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  window.enable_copy_code_button = true;
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- MathJax Configuration -->
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true,
+      packages: ['base', 'ams', 'noerrors', 'noundefined']
+    },
+    options: {
+      ignoreHtmlClass: 'tex2jax_ignore',
+      processHtmlClass: 'tex2jax_process'
+    },
+    startup: {
+      pageReady: () => {
+        return MathJax.startup.defaultPageReady().then(() => {
+          console.log('MathJax is loaded');
+        });
+      }
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single" dir="ltr">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          commuteneko's blog
+          <span class="site-subtitle">Personal Blog</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="https://kadryjh1724.github.io/"
+                
+                
+              >Home</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="https://kadryjh1724.github.io/about/"
+                
+                
+              >About</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/categories/#measure-theory" itemprop="item"><span itemprop="name">Measure theory</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        <li class="current">[MTP] 1-2. Measure</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="http://localhost:4000/">
+        <img src="/assets/profile.PNG" alt="Jiho Son" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url">Jiho Son</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>PhD course student in Seoul National University, studying computational chemistry and deep learning.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Seoul, Republic of Korea</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="mailto:kadryjh1724@snu.ac.kr" rel="nofollow noopener noreferrer me"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span></a></li>
+          
+        
+          
+            <li><a href="https://twitter.com/commuteneko" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i><span class="label">Twitter</span></a></li>
+          
+        
+          
+            <li><a href="https://github.com/kadryjh1724" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://instagram.com/commuteneko" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i><span class="label">Instagram</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="[MTP] 1-2. Measure">
+    <meta itemprop="description" content="Chapter 1. Measure Spaces">
+    <meta itemprop="datePublished" content="2025-06-28T00:00:00+09:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="http://localhost:4000/measure%20theory/MTP02/" itemprop="url">[MTP] 1-2. Measure
+</a>
+          </h1>
+          
+            <p class="page__subtitle">Measure Theory and Probability: 1. Measure Spaces</p>
+          
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          6 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#chapter-1-measure-spaces">Chapter 1. Measure Spaces</a><ul><li><a href="#1-2-measure">1-2. Measure</a><ul><li><a href="#measure-and-measure-spaces">Measure and measure spaces</a></li><li><a href="#basic-properties">Basic properties</a></li><li><a href="#monotone-convergence-properties">Monotone-convergence properties</a></li></ul></li></ul></li></ul>
+            </nav>
+          </aside>
+        
+        <h1 id="chapter-1-measure-spaces">Chapter 1. Measure Spaces</h1>
+
+<h2 id="1-2-measure">1-2. Measure</h2>
+
+<h3 id="measure-and-measure-spaces">Measure and measure spaces</h3>
+
+<p>In the definitions of both $\sigma$-algebras and measures, <em>countable</em> unions and <em>countable</em> additivity are important.</p>
+
+<p><span style="background-color:#fff5b1"><strong>Definition 1.2.1</strong></span> Let $\Sigma_{0}$ be an algebra on $S$. Let $\mu_{0} : \Sigma_{0} \rightarrow [0, \infty]$ be a <em>set function</em>.</p>
+<ul>
+  <li>
+    <p>(a) $\mu_{0}$ is <span style="background-color:#ffdce0">additive</span> if $\mu_{0}(\varnothing) = 0$ and</p>
+
+\[\mu_{0}(F \cup G) = \mu_{0}(F) + \mu_{0}(G) \quad \text{if} \; F, G \in \Sigma_{0} \;\text{and}\; F \cap G = \varnothing\]
+  </li>
+  <li>
+    <p>(b) $\mu_{0}$ is <span style="background-color:#ffdce0">$\sigma$-additive</span>(or <em>countably additive</em>) if $\mu_{0}(\varnothing) = 0$ and</p>
+
+\[\mu_{0} \left(\bigcup_{n=1}^{\infty} F_{n}\right) = \sum_{n=1}^{\infty} \mu_{0}(F_{n})\]
+
+    <p>for $\lbrace F_{n} \rbrace_{n=1}^{\infty} \subset \Sigma_{0}$, $\bigcup_{n=1}^{\infty} F_{n} \in \Sigma_{0}$ and $F_{n} \cap F_{m} = \varnothing$ for $n \neq m$\dots</p>
+  </li>
+</ul>
+
+<p><span style="background-color:#fff5b1"><strong>Definition 1.2.2</strong></span> Let $(S, \Sigma)$ be a measurable space. A set function $\mu : \Sigma \rightarrow [0, \infty]$ is called a <span style="background-color:#ffdce0">measure</span> on $\Sigma$ if $\mu$ is $\sigma$-additive. Additionally, we call $(S, \Sigma, \mu)$ a <span style="background-color:#ffdce0">measure space</span>.</p>
+
+<p><span style="background-color:#fff5b1"><strong>Definition 1.2.3</strong></span> Let $\mu$ be a measure on measurable space $(S, \Sigma)$.</p>
+
+<ul>
+  <li>(a) $\mu$ is <span style="background-color:#ffdce0">finite</span> if $\mu(S) &lt; \infty$.</li>
+  <li>(b) $\mu$ is <span style="background-color:#ffdce0">$\sigma$-finite</span> if there exists $\lbrace S_{n} \rbrace_{n=1}^{\infty} \subset \Sigma$ such that $\mu(S_{n}) &lt; \infty$ for all $n \in \mathbb{N}$ and $\bigcup_{n=1}^{\infty} S_{n} = S$.</li>
+</ul>
+
+<p><span style="background-color:#fff5b1"><strong>Definition 1.2.4</strong></span> If $\mu(S) = 1$, $\mu$ is called a <span style="background-color:#ffdce0">probability measure</span> and $(S, \Sigma, \mu)$ is called a <span style="background-color:#ffdce0">probability triple</span>.</p>
+
+<p>Also note that if $\mu$ is finite, $\mu(\bullet)/\mu(S)$ becomes a probability measure.<br />
+Sets with measure zero cannot contribute when we talk about <em>measuring</em> sets.</p>
+
+<p><span style="background-color:#fff5b1"><strong>Definition 1.2.5</strong></span> Given a measure space $(S, \Sigma, \mu)$,</p>
+
+<ul>
+  <li>(a) a $\Sigma$-measurable set $A \in \Sigma$ is called a <span style="background-color:#ffdce0">$\mu$-null set</span> if $\mu(A) = 0$.</li>
+  <li>
+    <p>(b) a statement $M(x)$ about $x \in S$ is said to hold <span style="background-color:#ffdce0">$\mu$-almost everywhere($\mu$-a.e.)</span> if</p>
+
+\[\exists \; \mu\text{-null set } F \;\text{s.t.}\; M(x) \text{ holds for all } x \notin F\]
+  </li>
+</ul>
+
+<hr />
+
+<h3 id="basic-properties">Basic properties</h3>
+
+<p>Since we have defined several basic definitions related to measures, now we proceed on the properties of measures. These properties hold for the generic set functions(you can lift the condition that $\mu$ is measure).</p>
+
+<p><span style="background-color:#fff5b1"><strong>Lemma 1.2.6</strong></span> Let $\Sigma_{0}$ be an algebra and $\mu_{0} : \Sigma_{0} \rightarrow [0, \infty]$ be a set function.</p>
+
+<ul>
+  <li>(1) If $\mu_{0}$ is countably additive, then $\mu_{0}$ is (<em>finitely</em>) additive.</li>
+  <li>(2) If $\mu_{0}$ is (<em>finitely</em>) additive, then $\mu_{0}$ is monotonic.</li>
+  <li>
+    <p>(3) If $\mu_{0}$ is (<em>finitely</em>) additive, then</p>
+
+\[\mu_{0}(A \cup B) + \mu_{0}(A \cap B) = \mu_{0}(A) + \mu_{0}(B) \; (A, B \in \Sigma_{0})\]
+  </li>
+</ul>
+
+<p><strong>Proof.</strong></p>
+<ul>
+  <li>
+    <p>(1) Let $A_{1}, \cdots, A_{n} \in \Sigma_{0}$ be disjoint sets and $A_{n+k} = \varnothing \;(k \in \mathbb{N})$. Then $\mu_{0}(A_{n+k}) = 0$ yields</p>
+
+\[\mu_{0}\left(\bigcup_{i=1}^{n}A_{i}\right) = \mu_{0}\left(\bigcup_{i=1}^{\infty}A_{i}\right) = \sum_{i=1}^{\infty}\mu_{0}(A_{i}) = \sum_{i=1}^{n}\mu_{0}(A_{i})\]
+  </li>
+  <li>
+    <p>(2) Let $A, B \in \Sigma_{0}$ and $A \subset B$. Then</p>
+
+\[\mu_{0}(B) = \mu_{0}(A) + \underbrace{\mu_{0}(B \setminus A)}_{\geq 0} \geq \mu_{0}(A).\]
+
+    <p>Note that $\mu_{0}(B \setminus A) = \mu_{0}(B) - \mu_{0}(A)$ only if $\mu_{0}(A) &lt; \infty$.</p>
+  </li>
+  <li>
+    <p>(3) $A \cup B = [A \setminus (A \cap B)] \sqcup B$ and $A = [A \setminus (A \cap B)] \sqcup (A \cap B)$ implies</p>
+
+\[\begin{align*}
+  \mu_{0}(A \cup B) + \mu_{0}(A \cap B) &amp;= \mu_{0}(A \setminus (A \cap B)) + \mu_{0}(B) + \mu_{0}(A \cap B) \\ 
+  &amp;= \mu_{0}(A) + \mu_{0}(B) \quad \square
+\end{align*}\]
+  </li>
+</ul>
+
+<p><span style="background-color:#fff5b1"><strong>Corollary 1.2.7</strong></span> If $\mu_{0}$ is additive, then $\mu_{0}$ is <span style="background-color:#ffdce0">subadditive</span>.</p>
+
+\[\mu_{0}(A \cup B) \leq \mu_{0}(A) + \mu_{0}(B) \quad (A, B \in \Sigma_{0})\]
+
+<p>Now we re-write these results for the measures.</p>
+
+<p><span style="background-color:#fff5b1"><strong>Lemma 1.2.8</strong></span> Let $(S, \Sigma, \mu)$ be a measure space. Then</p>
+
+<ul>
+  <li>(1) $\mu(A \cup B) \leq \mu(A) + \mu(B)$ $(A, B \in \Sigma)$</li>
+  <li>(2) $\mu(\bigcup_{i=1}^{n}F_{i}) \leq \sum_{i=1}^{n}\mu(F_{i})$ $(F_{i} \in \Sigma, \; i = 1, 2, \cdots, n)$</li>
+  <li>(3) $\mu(A \cup B) = \mu(A) + \mu(B) - \mu(A \cap B)$ if $\mu(A \cap B) &lt; \infty$</li>
+  <li>
+    <p>(4) For $F_{i} \in \Sigma \; (i = 1, 2, \cdots, n)$,</p>
+
+\[\begin{align*}
+    \mu\left(\bigcup_{i=1}^{n}F_{i}\right) &amp;= \sum_{i=1}^{n}\mu(F_{i}) - \sum_{i&lt;j}^{n} \mu(F_{i} \cap F_{j}) + \sum_{i&lt;j&lt;k}^{n} \mu(F_{i} \cap F_{j} \cap F_{k}) \\
+    &amp; \quad \quad \quad \quad -\cdots + (-1)^{n-1}\mu(F_{1} \cap \cdots \cap F_{n})
+  \end{align*}\]
+  </li>
+</ul>
+
+<p><strong>Proof.</strong> See proof of <span style="background-color:#fff5b1"><strong>Lemma 1.2.6</strong></span>.</p>
+
+<p><span style="background-color:#fff5b1"><strong>Lemma 1.2.9</strong></span>(Countable subadditivity of measures) Let $\mu$ be a measure on a $\sigma$-algebra $\Sigma$. Then for $\lbrace A_{n} \rbrace_{n=1}^{\infty} \subset \Sigma$,</p>
+
+\[\mu\left(\bigcup_{n=1}^{\infty} A_{n}\right) \leq \sum_{n=1}^{\infty} \mu(A_{n})\]
+
+<p><strong>Proof.</strong> <span style="background-color:#dcffe4"><em>Strategy</em>. Construct disjoint sets to use countable additivity.</span><br />
+Define $B_{1} = A_{1}$ and $B_{n} = A_{n} \setminus \bigcup_{i=1}^{n-1}A_{i}$. Then $\lbrace B_{n} \rbrace_{n=1}^{\infty} \subset \Sigma$ and all $B_{n}$’s are disjoint. Then</p>
+
+\[\begin{align*}
+  \mu\left(\bigcup_{n=1}^{\infty}A_{n}\right) = \mu\left(\bigcup_{n=1}^{\infty}B_{n}\right) &amp;= \sum_{n=1}^{\infty} \mu(B_{n}) \quad (\because \; \sigma\text{-additivity}) \\
+  &amp;\leq \sum_{n=1}^{\infty} \mu(A_{n}) \quad (\because \; \text{monotonicity})
+\end{align*}\]
+
+<p>More specifically, $\mu(A{n}) = \mu(A_{n} \setminus B_{n}) + \mu(B_{n}) \geq \mu(B_{n})$. $\square$</p>
+
+<hr />
+
+<h3 id="monotone-convergence-properties">Monotone-convergence properties</h3>
+
+<p><span style="background-color:#fff5b1"><strong>Definition 1.2.10</strong></span> For numbers $a_{i} \; (i \in \mathbb{N})$ and $a \in \bar{\mathbb{R}}$,</p>
+
+\[\begin{align*}
+  a_{n} \uparrow a &amp;\;\Longleftrightarrow\; a_{n} \leq a_{n+1} \;(\forall n \in \mathbb{N}) \;\text{and}\; \lim_{n\rightarrow\infty} a_{n} = a \\
+  a_{n} \downarrow a &amp;\;\Longleftrightarrow\; a_{n} \geq a_{n+1} \;(\forall n \in \mathbb{N}) \;\text{and}\; \lim_{n\rightarrow\infty} a_{n} = a
+\end{align*}\]
+
+<p>For sets $F_{i} \; (i \in \mathbb{N})$ and $F$,</p>
+
+\[\begin{align*}
+  F_{n} \uparrow F &amp;\;\Longleftrightarrow\; F_{n} \subseteq F_{n+1} \;(\forall n \in \mathbb{N}) \;\text{and}\; \bigcup_{n=1}^{\infty} F_{n} = F \\
+  F_{n} \downarrow F &amp;\;\Longleftrightarrow\; F_{n} \supseteq F_{n+1} \;(\forall n \in \mathbb{N}) \;\text{and}\; \bigcap_{n=1}^{\infty} F_{n} = F
+\end{align*}\]
+
+<p><span style="background-color:#fff5b1"><strong>Lemma 1.2.11</strong></span>(Continuity of measures) Let $(S, \Sigma, \mu)$ be a measure space.</p>
+
+<ul>
+  <li>(a) Suppose $F_{n} \in \Sigma \; (n \in \mathbb{N})$ and $F_{n} \uparrow F$. Then $\mu(F_{n}) \uparrow \mu(F)$.</li>
+  <li>(b) Suppose $G_{n} \in \Sigma \; (n \in \mathbb{N})$, $G_{n} \downarrow G$ and $\mu(G_{k_{0}}) &lt; \infty$ for some $k_{0} \in \mathbb{N}$. Then $\mu(G_{n}) \downarrow \mu(G)$.</li>
+</ul>
+
+<p><strong>Proof.</strong> <span style="background-color:#dcffe4"><em>Strategy</em>. Construct disjoint sets to use countable additivity.</span></p>
+
+<div style="text-align: center;">
+  <img src="/assets/images/posts/2025-06-28-MTP02/1.png" style="width: 50%;" alt="이미지 설명" />
+</div>
+
+<ul>
+  <li>
+    <p>(a) Let $G_{1} = F_{1}$ and $G_{n} = F_{n} \setminus F_{n-1} \; (n \geq 2)$. Then $G_{n} \in \Sigma \; (n \in \mathbb{N})$ and all $G_{n}$’s are disjoint. Moreover,</p>
+
+\[F_{n} = G_{1} \cup \cdots \cup G_{n} = \bigcup_{i=1}^{n}G_{i}, \; F = \bigcup_{i=1}^{\infty} G_{i}\]
+
+    <p>From the additivity, $\displaystyle{\mu(F_{n}) = \sum_{i=1}^{n}\mu(G_{i})}$. Now take $n \rightarrow \infty$ limit:</p>
+
+\[\lim_{n\rightarrow\infty}\mu(F_{n}) = \sum_{n=1}^{\infty}\mu(G_{n}) = \mu\left(\bigcup_{n=1}^{\infty}G_{n}\right) = \mu(F)\]
+  </li>
+  <li>
+    <p><strong>Note.</strong> (a) holds only for <em>increasing</em> sequence, but not for decreasing sequence of sets. For instance,</p>
+
+\[\mathrm{Leb}((n, \infty)) = \infty, \; (n, \infty) \downarrow \varnothing \;\text{but}\; \mathrm{Leb}(\varnothing) = 0\]
+
+    <p>where $\mathrm{Leb}$ denotes Lebesgue measure.</p>
+  </li>
+  <li>
+    <p>(b) We construct <em>increasing sequence</em> of sets. Let $F_{n} = G_{k_{0}} \setminus G_{k_{0} + n} \; (n \in \mathbb{N})$. Now we can apply (a):</p>
+
+\[\begin{align*}
+  \mu(G_{k_{0}}) - \mu(G_{k_{0} + n}) = \mu(F_{n}) &amp;\uparrow \mu(F) \\
+  &amp;= \mu(G_{k_{0}} \setminus G) = \mu(G_{k_{0}}) - \mu(G)
+\end{align*}\]
+
+    <p>$\mu(G_{k_{0}}) &lt; \infty$ implies $\mu(G_{n}) \downarrow \mu(G)$. $\square$</p>
+  </li>
+</ul>
+
+<p>The following is a trivial corollary.</p>
+
+<p><span style="background-color:#fff5b1"><strong>Corollary 1.2.12</strong></span> The union of a countable $\mu$-null sets is $\mu$-null.</p>
+
+<p>Before we finish, we state <em>alternative</em> way to define measure. In <span style="background-color:#fff5b1"><strong>Definition 1.2.2</strong></span>, we have defined measure with the countable additivity. However, we can do similar with countable subadditivity.</p>
+
+<p><span style="background-color:#fff5b1"><strong>Lemma 1.2.13</strong></span> Let $(S, \Sigma)$ be a measurable space. If set function $\mu : \Sigma \rightarrow [0, \infty]$ satisfies</p>
+
+<ul>
+  <li>(1) $\mu(\varnothing) = 0$</li>
+  <li>(2) $\mu$ is finitely additive</li>
+  <li>(3) $\mu$ is countably subadditive</li>
+</ul>
+
+<p>then $\mu$ is a measure.</p>
+
+<p><strong>Proof.</strong> Let $\lbrace A_{n} \rbrace_{n=1}^{\infty} \subset \Sigma$ be a collection of disjoint sets. We want to show that
+\(\mu\left(\bigcup_{n=1}^{\infty}A_{n}\right) = \sum_{n=1}^{\infty} \mu(A_{n})\)</p>
+
+<ul>
+  <li>($\leq$) already satisfied by the countable subadditivity.</li>
+  <li>
+    <p>($\geq$) Split the summation.</p>
+
+\[\begin{align*}
+  \mu\left(\bigcup_{i=1}^{\infty}A_{i}\right) &amp;= \mu\left(\bigcup_{i=1}^{n}A_{i}\right) + \mu\left(\bigcup_{i=n+1}^{\infty}A_{i}\right) \quad (\because \; (2)) \\
+  &amp;\geq \mu\left(\bigcup_{i=1}^{n}A_{i}\right) = \sum_{i=1}^{n}\mu(A_{i}) \uparrow \sum_{i=1}^{\infty} \mu(A_{i}) \; \text{as} \; n \rightarrow \infty \; \square
+\end{align*}\]
+  </li>
+</ul>
+
+<p>The following lemma will be used later.</p>
+
+<p><span style="background-color:#fff5b1"><strong>Lemma 1.2.14</strong></span> Let $(S, \Sigma, \mu)$ be a measure space. Suppose that the sequence of sets $A_{n} \in \Sigma \; (n \in \mathbb{N})$ satisfies $\mu(A_{n}) &lt; \infty$ and $A_{n} \uparrow S$. Define</p>
+
+\[\nu_{n}(B) = \mu(A_{n} \cap B) \quad (\forall B \in \Sigma)\]
+
+<p>Show that</p>
+<ul>
+  <li>(1) $\nu_{n}$’s are finite measures on $\Sigma$.</li>
+  <li>(2) $\displaystyle{\lim_{n\rightarrow\infty}\nu_{n}(B) = \mu(B)}$ for all $B \in \Sigma$.</li>
+</ul>
+
+<p><strong>Proof.</strong></p>
+<ul>
+  <li>
+    <p>(1) Firstly, $\nu_{n}(\varnothing) = \mu(\varnothing \cap A_{n}) = \mu(\varnothing) = 0$. Now let $\lbrace B_{n} \rbrace_{n=1}^{\infty}$ be a collection of disjoint sets. Then</p>
+
+\[\begin{align*}
+  \nu_{n}\left(\bigcup_{i=1}^{\infty}B_{i}\right) &amp;= \mu\left(A_{n} \cap \bigcup_{i=1}^{\infty}B_{i}\right) = \mu\left(\bigcup_{i=1}^{\infty}A_{n} \cap B_{i}\right) \\
+  &amp;= \sum_{i=1}^{\infty} \mu(A_{n} \cap B_{i}) \quad (\because \; \mu, \;\sigma\text{-additive}) \\
+  &amp;= \sum_{i=1}^{\infty} \nu_{n}(B_{i})
+\end{align*}\]
+
+    <p>Lastly, $\nu_{n}(S) = \mu(A_{n} \cap S) = \mu(A_{n}) &lt; \infty$. Therefore, $\nu_{n}$’s are finite measures on $\Sigma$.</p>
+  </li>
+  <li>
+    <p>(2) By the continuity of measure(<span style="background-color:#fff5b1"><strong>Lemma 1.2.11</strong></span>),</p>
+
+\[\lim_{n\rightarrow\infty}\nu_{n}(B) = \lim_{n\rightarrow\infty}\mu(A_{n} \cap B) \uparrow \mu(S \cap B) = \mu(B) \; \square\]
+  </li>
+</ul>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#mathematics" class="page__taxonomy-item p-category" rel="tag">mathematics</a><span class="sep">, </span>
+    
+      <a href="/tags/#measure-theory" class="page__taxonomy-item p-category" rel="tag">measure theory</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#measure-theory" class="page__taxonomy-item p-category" rel="tag">Measure Theory</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2025-06-28T00:00:00+09:00">June 28, 2025</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=%5BMTP%5D+1-2.+Measure%20http%3A%2F%2Flocalhost%3A4000%2Fmeasure%2520theory%2FMTP02%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fmeasure%2520theory%2FMTP02%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/measure%20theory/MTP02/" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/measure%20theory/MTP01/" class="pagination--pager" title="[MTP] 1-1. Algebra and $\sigma$-algebra
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    
+<div class="page__related">
+  
+  <h2 class="page__related-title">You may also enjoy</h2>
+  <div class="grid__wrapper">
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/measure%20theory/MTP01/" rel="permalink">[MTP] 1-1. Algebra and $\sigma$-algebra
+</a>
+      
+    </h2>
+    
+      <p class="archive__item-subtitle">Measure Theory and Probability: 1. Measure Spaces</p>
+    
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          7 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Chapter 1. Measure Spaces
+
+</p>
+  </article>
+</div>
+
+    
+  </div>
+</div>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2025 <a href="http://localhost:4000">commuteneko's blog</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ["\\(", "\\)"] ],
+      displayMath: [ ['$$', '$$'], ["\\[", "\\]"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": {availableFonts: ["TeX"]}
+  });
+</script>
+  </body>
+</html>
